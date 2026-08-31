@@ -1,0 +1,15 @@
+---
+description: Firmware coding standards and conventions
+alwaysApply: true
+---
+
+# Coding Standards
+
+## `static volatile`
+
+- Don't reach for `static volatile` by default. If you don't have to use it,
+  don't. Prefer plain stack locals when the value never crosses an interrupt
+  boundary.
+- Use `volatile` only when state is genuinely shared across an ISR boundary
+  (or is otherwise modified outside the normal flow of execution, e.g. by
+  hardware).

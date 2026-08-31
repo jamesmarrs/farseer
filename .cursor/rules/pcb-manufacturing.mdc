@@ -1,0 +1,44 @@
+---
+description: PCB fab constraints — no via-in-pad, standard through-hole vias only
+alwaysApply: true
+---
+
+# PCB manufacturing
+
+This board is built with **standard through-hole vias** (open barrels).
+Via-in-pad (filled, plated-over, VIPPO) is a different process and is
+**not allowed**.
+
+## Vias vs pads (default)
+
+- Never place a via **on** or **in** an ordinary SMD pad: capacitor,
+  resistor, or IC signal/power pin.
+- Place the via **as close as possible** to the pad, then neck a short
+  copper connection (dog-bone) from the pad to the via.
+- The via **drill** must sit outside the pad. Merged copper from pad to
+  via annular ring is fine; a hole in the paste area is not.
+- When advising those parts, say "next to the pad", never "on the pad".
+
+Open vias in a paste pad wick solder down the barrel (tombstones, voids,
+starved joints). Filling and capping vias is a fab option we are not
+buying.
+
+## Exception — footprints that require pad vias
+
+When the datasheet or footprint **needs** vias in an exposed thermal pad,
+put them there. Do not dog-bone those around the pad.
+
+Applies today to **U3** (TPS54560-Q1 PowerPAD / pin 9): multiple vias
+directly under the package, per datasheet §10.1 (thermal table assumes
+6 × 13 mil). Tent or plug the barrels so paste is not sucked through;
+we are still not buying filled/plated-over via-in-pad.
+
+Same exception for any later part whose land pattern calls for thermal
+vias in the exposed pad. Ordinary two-terminal and IC-pin pads stay
+under the default ban.
+
+## Defaults (KiCad netclass)
+
+Board vias in use are ~0.7 mm / 0.3 mm drill. Default class is 0.6 mm /
+0.3 mm drill, 0.2 mm clearance. Do not invent tighter geometry or
+microvias unless the fab stack-up is updated.

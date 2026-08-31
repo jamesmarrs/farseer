@@ -1,0 +1,122 @@
+---
+description: Project hardware and documentation context
+alwaysApply: true
+---
+
+# Project Context
+
+## Application
+
+- This is the official project for an in-car race telemetry module.
+- The module is installed in race cars traveling **0–120 mph**.
+- Core functions:
+  1. **Uplink:** transmit very accurate GPS position to a server over **UDP**.
+  2. **Downlink:** receive a very low volume of data (as little as a single
+     byte) sent out to the modules.
+- The MCU remains the **PIC18F57Q84 Curiosity Nano (48-pin)**, documented in
+  `pic_resources/`.
+
+## Hardware / Peripherals
+
+- **Quectel BG95-M3** LPWA transceiver (LTE-M / NB-IoT / GNSS) — provides the
+  cellular link carrying the UDP uplink and downlink.
+  Datasheet: `datasheets/Quectel_BG95-M3_Mini_PCIe_LPWA_Specification_V1.1.pdf`.
+  **Board design (Mini PCIe card):**
+  `datasheets/Quectel_BG95-M3_Mini_PCIe_Hardware_Design_V1.0.pdf` — the only
+  document with the 52-pin connector pin assignment, the card's power domains,
+  and the (U)SIM / LED_WWAN# reference circuits. Use this, NOT
+  `quectel_bg95_series_hardware_design_v1-6.pdf`, for anything at the socket:
+  that one describes the raw 102-pin LGA module inside the card, whose pin
+  numbers and 1.8 V levels do **not** apply to the Mini PCIe edge connector.
+- **u-blox NEO-M9N** GNSS receiver — high-accuracy positioning for the car (and
+  available as a positioning reference for the BG95).
+  Datasheet: `datasheets/NEO-M9N-00B_DataSheet_UBX-19014285.pdf`.
+  **Board design:** `datasheets/NEO-M9N_Integrationmanual_UBX-19014286.pdf`
+  (R10) — the datasheet explicitly defers to this for VCC decoupling, the RF
+  front end (DC block, active-antenna bias), V_BCKP, V_USB when USB is unused,
+  Reserved-pin handling, and the LCC footprint / paste mask.
+
+## MCU Package Warning
+
+- **PACKAGE: the PIC18F57Q84 on the Curiosity Nano is the 48-pin package.**
+  The datasheet (DS40002213) covers PIC18F**27/47/57**Q84 = 28/40/**48**-pin.
+  ALWAYS read the **48-pin column** of any package-dependent table. This matters
+  most for the PPS "Available Input Port" / "Available Output Ports" tables
+  (e.g. Table 21-1): a peripheral's input/output may be legal on a port for the
+  28/40-pin parts but NOT on the 48-pin part. The PPS register will silently
+  accept an illegal port write and route nothing — no error, just dead signal.
+  Picking the wrong pin from a smaller-package column can also drive/strap a pin
+  that is wired differently on the 48-pin board and damage the circuit. Verify
+  every pin/PPS choice against the 48-pin column before writing code.
+  (Concrete example: `SMT1SIGPPS` on the 48-pin part is limited to PORTC/PORTF;
+  PORTB is not a valid SMT1 signal source.)
+
+## Voltage / Integration
+
+- The board's target supply rail (VTG) is set to **3.3V**. This was chosen to
+  simplify interfacing with the peripheral modules (both are 3.3V-class parts,
+  not 5V tolerant) and to avoid over-driving them. At 3.3V the ADC full scale
+  with VREF+ = VDD is 3.3V, and I/O pins are rated to VDD + 0.3V (datasheet
+  §50.1), so inputs must stay within 0–3.3V.
+- **NEO-M9N** is directly 3.3V-compatible: VCC operating range 2.7–3.6V
+  (nominal 3.0V) and digital I/O Vih = 0.8·VCC (datasheet §4.2, Table 11), so
+  the PIC at 3.3V can drive/receive its UART directly, no level shifting needed.
+- **Level shifting (BG95-M3): NOT needed at the Mini PCIe edge connector.** The
+  raw 102-pin LGA module inside the card is a 1.8V part, but the card carries
+  its own translators, so the 52-pin edge connector presents **3.3V** UART
+  (Mini PCIe Hardware Design V1.0 §3.5, Table 8) and **3.3V** control I/O —
+  PERST#, W_DISABLE#, RI (Table 10). The PIC at 3.3V drives and receives these
+  directly; do not add a level shifter. The only 1.8V signals on the card are
+  (U)SIM and PCM/I2C, and neither is routed to the PIC. Do NOT apply figures
+  from `quectel_bg95_series_hardware_design_v1-6.pdf` here — that document
+  describes the LGA module, and its 1.8V levels do not apply at the socket.
+
+# Source of Truth (MANDATORY)
+
+## Circuit / board design
+
+- The **KiCad project at `ki_cad_project/`** is the single authoritative
+  source for the circuit: schematic, nets, reference designators, values,
+  footprints, MPNs, and per-part Design Notes. Read the `.kicad_sch` sheets
+  (they are s-expression text) or the exports in `docs/generated/` — never a
+  document — to answer "what is on the board".
+- **`docs/generated/` is machine-generated from KiCad** by
+  `scripts/export_kicad.sh` (schematic PDF + BOM CSV). Never hand-edit it;
+  re-run the script after any schematic change.
+- **NEVER treat `docs/_archive/` as a source of truth.** It holds pre-KiCad
+  drawings, generators, and BOMs whose reference designators and values are
+  known-stale. Do not cite it, do not reconcile KiCad against it, and do not
+  resurrect values from it.
+- The remaining `docs/*.md` files carry design *rationale* only (datasheet
+  citations, sizing math, traps, trade-offs). If a doc and KiCad ever
+  disagree on a part or value, KiCad wins and the doc needs fixing.
+
+## Device / toolchain facts
+
+The local resource folders are the authoritative source of truth for ALL
+hardware, device, register, and toolchain questions:
+
+- `pic_resources/` — PIC18F57Q84, the Curiosity Nano board, the XC8 compiler,
+  and related toolchain. Includes the device datasheet, hardware user guide,
+  pinout, and board schematics/netlist.
+- `datasheets/` — datasheets for the peripheral modules (BG95-M3 transceiver,
+  NEO-M9N GNSS receiver). Authoritative for AT commands, register/message
+  formats, pinouts, electrical specs, and timing of those parts.
+
+Rules:
+
+1. ALWAYS consult these folders FIRST, before any web search or relying on
+   prior knowledge. Read the actual datasheet/schematic to confirm register
+   values, PPS codes, pin mappings, baud formulas, config bits, AT commands,
+   etc. Wrong values can be catastrophic for device programming.
+2. The web and your prior knowledge are SUPPLEMENTAL only. If they conflict
+   with the local resources, the local resources win — never override a local
+   datasheet value with a web result. Different revisions/devices share similar
+   tables, so a web answer that "agrees" with existing code is NOT confirmation.
+3. The datasheet/schematic PDFs are binary; extract text with
+   `pdftotext -layout <file.pdf> -` and search the output. The relevant PDFs
+   live at the top of `pic_resources/` (e.g.
+   `PIC18F27-47-57Q84-Microcontroller-Data-Sheet-DS40002213.pdf`) and in
+   `datasheets/`.
+4. When citing a hardware fact, reference the specific document and table/page
+   it came from so it can be verified.

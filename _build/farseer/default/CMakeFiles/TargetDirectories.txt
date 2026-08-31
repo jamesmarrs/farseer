@@ -1,0 +1,4 @@
+/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir
+/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_image_bs5gNqh4.dir
+/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/edit_cache.dir
+/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/rebuild_cache.dir

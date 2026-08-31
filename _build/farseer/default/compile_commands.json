@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/bg95.c.p1 -c /Users/james/motorsports/projects/farseer/bg95.c",
+  "file": "/Users/james/motorsports/projects/farseer/bg95.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/bg95.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/gps.c.p1 -c /Users/james/motorsports/projects/farseer/gps.c",
+  "file": "/Users/james/motorsports/projects/farseer/gps.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/gps.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/main.c.p1 -c /Users/james/motorsports/projects/farseer/main.c",
+  "file": "/Users/james/motorsports/projects/farseer/main.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/main.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/telemetry.c.p1 -c /Users/james/motorsports/projects/farseer/telemetry.c",
+  "file": "/Users/james/motorsports/projects/farseer/telemetry.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/telemetry.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/timer.c.p1 -c /Users/james/motorsports/projects/farseer/timer.c",
+  "file": "/Users/james/motorsports/projects/farseer/timer.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/timer.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart1.c.p1 -c /Users/james/motorsports/projects/farseer/uart1.c",
+  "file": "/Users/james/motorsports/projects/farseer/uart1.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart1.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart2.c.p1 -c /Users/james/motorsports/projects/farseer/uart2.c",
+  "file": "/Users/james/motorsports/projects/farseer/uart2.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart2.c.p1"
+},
+{
+  "directory": "/Users/james/motorsports/projects/farseer/_build/farseer/default",
+  "command": "/Applications/microchip/xc8/v3.10/bin/xc8-cc -DXPRJ_default=default -D__18F57Q84__ -c -mcpu=18F57Q84 -mdfp=/Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8 -fno-short-double -fno-short-float -memi=wordwrite -O0 -maddrqual=ignore -mwarn=-3 -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits -std=c99 -gdwarf-3 -mno-const-data-in-config-mapped-progmem -mstack=compiled:auto:auto:auto -o CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart3.c.p1 -c /Users/james/motorsports/projects/farseer/uart3.c",
+  "file": "/Users/james/motorsports/projects/farseer/uart3.c",
+  "output": "/Users/james/motorsports/projects/farseer/_build/farseer/default/CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart3.c.p1"
+}
+]

@@ -1,0 +1,63 @@
+Net         Name        X Coord     Y Coord     Side        Hole Size   Type        
+            J100-1          7.62mm    2.3368mm  Bottom             1mm  Through hole
+VCC_VBUS    J100-56         7.62mm   17.9832mm  Bottom             1mm  Through hole
+DBG0        J100-53        15.24mm   17.5768mm  Bottom             1mm  Through hole
+RF3_LED0    J100-28         76.2mm    2.7432mm  Bottom             1mm  Through hole
+ID_SYS      J100-2         10.16mm    2.7432mm  Bottom             1mm  Through hole
+VCC_EDGE    J100-51        20.32mm   17.5768mm  Bottom             1mm  Through hole
+RC1         J100-50        22.86mm   17.9832mm  Bottom             1mm  Through hole
+GND         J100-52        17.78mm   17.9832mm  Bottom             1mm  Through hole
+RC0         J100-49         25.4mm   17.5768mm  Bottom             1mm  Through hole
+RA5_ANA5    J100-48        27.94mm   17.9832mm  Bottom             1mm  Through hole
+RB5_ANB5_PWM2/3J100-47        30.48mm   17.5768mm  Bottom             1mm  Through hole
+RB4_ANB4_PWM2/3J100-46        33.02mm   17.9832mm  Bottom             1mm  Through hole
+RA2_ANA2    J100-45        35.56mm   17.5768mm  Bottom             1mm  Through hole
+RA1_ANA1    J100-44         38.1mm   17.9832mm  Bottom             1mm  Through hole
+RA0_ANA0    J100-43        40.64mm   17.5768mm  Bottom             1mm  Through hole
+GND         J100-42        43.18mm   17.9832mm  Bottom             1mm  Through hole
+RD7         J100-41        45.72mm   17.5768mm  Bottom             1mm  Through hole
+RD6         J100-40        48.26mm   17.9832mm  Bottom             1mm  Through hole
+RD5         J100-39         50.8mm   17.5768mm  Bottom             1mm  Through hole
+RA4         J100-38        53.34mm   17.9832mm  Bottom             1mm  Through hole
+RF7         J100-37        55.88mm   17.5768mm  Bottom             1mm  Through hole
+RF6         J100-36        58.42mm   17.9832mm  Bottom             1mm  Through hole
+RF5         J100-35        60.96mm   17.5768mm  Bottom             1mm  Through hole
+RF4         J100-34         63.5mm   17.9832mm  Bottom             1mm  Through hole
+GND         J100-33        66.04mm   17.5768mm  Bottom             1mm  Through hole
+RE1         J100-32        68.58mm   17.9832mm  Bottom             1mm  Through hole
+RE0         J100-31        71.12mm   17.5768mm  Bottom             1mm  Through hole
+RA7         J100-30        73.66mm   17.9832mm  Bottom             1mm  Through hole
+RA6         J100-29         76.2mm   17.5768mm  Bottom             1mm  Through hole
+CDC_RX      J100-3          12.7mm    2.3368mm  Bottom             1mm  Through hole
+CDC_TX      J100-4         15.24mm    2.7432mm  Bottom             1mm  Through hole
+DBG1        J100-5         17.78mm    2.3368mm  Bottom             1mm  Through hole
+DBG2        J100-6         20.32mm    2.7432mm  Bottom             1mm  Through hole
+RD0_UART2/4_TXJ100-7         22.86mm    2.3368mm  Bottom             1mm  Through hole
+RD1_UART2/4_RXJ100-8          25.4mm    2.7432mm  Bottom             1mm  Through hole
+RB2_I2C1_SDAJ100-9         27.94mm    2.3368mm  Bottom             1mm  Through hole
+RB1_I2C1_SCLJ100-10        30.48mm    2.7432mm  Bottom             1mm  Through hole
+RC4_SPI1_MOSIJ100-11        33.02mm    2.3368mm  Bottom             1mm  Through hole
+RC5_SPI1_MISOJ100-12        35.56mm    2.7432mm  Bottom             1mm  Through hole
+RC6_SPI1_SCKJ100-13         38.1mm    2.3368mm  Bottom             1mm  Through hole
+RD4_SPI1_SS J100-14        40.64mm    2.7432mm  Bottom             1mm  Through hole
+GND         J100-15        43.18mm    2.3368mm  Bottom             1mm  Through hole
+RB0_UART2/4_TXJ100-16        45.72mm    2.7432mm  Bottom             1mm  Through hole
+RB3_UART2/4_RXJ100-17        48.26mm    2.3368mm  Bottom             1mm  Through hole
+RE2         J100-18         50.8mm    2.7432mm  Bottom             1mm  Through hole
+RC7         J100-19        53.34mm    2.3368mm  Bottom             1mm  Through hole
+RC2         J100-20        55.88mm    2.7432mm  Bottom             1mm  Through hole
+RC3         J100-21        58.42mm    2.3368mm  Bottom             1mm  Through hole
+RD2         J100-22        60.96mm    2.7432mm  Bottom             1mm  Through hole
+RD3         J100-23         63.5mm    2.3368mm  Bottom             1mm  Through hole
+RF1_UART1/3/5_RXJ100-26        71.12mm    2.7432mm  Bottom             1mm  Through hole
+RF0_UART1/3/5_TXJ100-25        68.58mm    2.3368mm  Bottom             1mm  Through hole
+GND         J100-24        66.04mm    2.7432mm  Bottom             1mm  Through hole
+RF2         J100-27        73.66mm    2.3368mm  Bottom             1mm  Through hole
+DBG3        J100-54         12.7mm   17.9832mm  Bottom             1mm  Through hole
+V\O\F\F\    J100-55        10.16mm   17.5768mm  Bottom             1mm  Through hole
+SWCLK       J202-1          3.19mm    10.795mm  Bottom             0mm  Surface mount
+GND         J202-2          3.19mm     9.525mm  Bottom             0mm  Surface mount
+VCC_P3V3    J202-4          4.46mm     9.525mm  Bottom             0mm  Surface mount
+SWDIO       J202-5          5.73mm    10.795mm  Bottom             0mm  Surface mount
+S\R\S\T\    J202-6          5.73mm     9.525mm  Bottom             0mm  Surface mount
+BOOT        TP202-1         12.4mm     5.777mm  Bottom             0mm  Surface mount

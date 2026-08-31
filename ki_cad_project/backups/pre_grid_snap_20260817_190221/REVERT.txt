@@ -1,0 +1,8 @@
+Restore the board to this snapshot (KiCad must be closed):
+
+  rsync -a --delete \
+    ki_cad_project/backups/pre_grid_snap_20260817_190221/farseer/ \
+    ki_cad_project/farseer/
+
+Do not copy .history. The footprints.pretty tree is also in this snapshot
+if a library file was touched (the snap script does not edit .kicad_mod).

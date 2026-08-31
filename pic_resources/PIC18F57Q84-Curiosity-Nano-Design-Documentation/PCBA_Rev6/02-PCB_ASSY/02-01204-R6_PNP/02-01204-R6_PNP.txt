@@ -1,0 +1,78 @@
+Altium Designer Pick and Place Locations
+\..\PCBA_Rev6\Project_Outputs\02-PCB ASSY\02-01204-R6_PNP\02-01204-R6_PNP.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       18-07-24
+Time:       15:13
+Revision:   ef76c8a96329fcbe0ca35a59cef3ad3917e45b58
+Variant:    Default Assembly
+Units used: mm
+
+Designator Comment                                             Layer       Footprint                              Center-X(mm) Center-Y(mm) Rotation Description      
+Y101       "Crystal 4 pins 1-3"                                TopLayer    CRYSTAL_L3.2W2.5H0.8                   38.8000      12.4850      270      Crystal          
+U100       "PIC18F5xQ84 TQFP-48"                               TopLayer    TQFP-48_7x7                            50.8000      10.1600      135      ""               
+J116       "CON JMPR SOLDER-STRAP OPEN SMD"                    BottomLayer CON_JMPR_1mmX1mm_ROUND_SOLDER-STRAP    44.9000      11.7750      180      ""               
+J115       "CON JMPR SOLDER-STRAP OPEN SMD"                    BottomLayer CON_JMPR_1mmX1mm_ROUND_SOLDER-STRAP    44.9000      13.2750      180      ""               
+C107       "Capacitor NP"                                      TopLayer    CAP_C_0402                             41.1000      14.4700      90       ""               
+R213       Resistor                                            TopLayer    RES_C_0402                             10.1437      9.3750       270      Resistor         
+U202       "MIC2008YML-TR VDFN-6"                              TopLayer    VDFN-6_2x2_EP0.8X1.40                  8.7850       14.0285      270      ""               
+R211       Resistor                                            TopLayer    RES_C_0402                             7.3635       15.7250      180      Resistor         
+R214       Resistor                                            TopLayer    RES_C_0402                             11.1103      9.3750       270      Resistor         
+R217       Resistor                                            TopLayer    RES_C_0402                             7.3936       4.5750       0        Resistor         
+R216       Resistor                                            TopLayer    RES_C_0402                             9.3024       5.6334       0        Resistor         
+Q201       "Transistor MOS-P GSD"                              TopLayer    LGA-3_GSD_0.7x0.6_CSD25501F3           9.1274       11.9750      0        "Transistor MOS" 
+J203       "CON USB2.0-C RCPT SMD RA KLS KLS1-5409"            TopLayer    CON_USB2.0-C_RCPT_SMD_RA_KLS_KLS1-5409 4.3275       10.1600      270      ""               
+C206       "Capacitor NP"                                      TopLayer    CAP_C_0402                             9.2350       15.7250      180      ""               
+C204       "Capacitor NP"                                      TopLayer    CAP_C_0402                             10.4337      12.7770      270      ""               
+C208       "Capacitor NP"                                      TopLayer    CAP_C_0402                             9.3677       10.9306      180      ""               
+C200       "Capacitor NP"                                      TopLayer    CAP_C_0402                             17.1450      12.8270      0        ""               
+U200       "MIC53XX ADJ MLF-6"                                 TopLayer    MLF-6_1.6X1.6mm                        16.9050      14.2250      0        "LDO Regulator"  
+U203       "MIC5528MT DFN-6"                                   TopLayer    DFN-6_1.2x1.2                          13.6790      15.2000      180      ""               
+Q200       "Transistor MOS-N GSD"                              TopLayer    X1-DFN1006-3                           11.7150      12.8750      180      "Transistor MOS" 
+U209       "74LVC(H)1T45 SOT-23-6_SC-70-6_SOT-6_SOT-363_DSBGA" TopLayer    X2-DFN1010-6                           21.0790      5.0250       0        ""               
+U208       "74LVC(H)1T45 SOT-23-6_SC-70-6_SOT-6_SOT-363_DSBGA" TopLayer    X2-DFN1010-6                           21.0790      6.5250       0        ""               
+U207       "74LVC(H)1T45 SOT-23-6_SC-70-6_SOT-6_SOT-363_DSBGA" TopLayer    X2-DFN1010-6                           21.0790      9.0250       0        ""               
+U205       "74LVC(H)1T45 SOT-23-6_SC-70-6_SOT-6_SOT-363_DSBGA" TopLayer    X2-DFN1010-6                           21.0790      10.5250      0        ""               
+U204       "74LVC(H)1T45 SOT-23-6_SC-70-6_SOT-6_SOT-363_DSBGA" TopLayer    X2-DFN1010-6                           21.0790      12.0250      0        ""               
+U201       MIC94163_1.5MM_1MM                                  TopLayer    MIC94163_1.5MM_1MM                     20.9875      14.2670      180      ""               
+C205       "Capacitor NP"                                      TopLayer    CAP_C_0603                             11.6580      15.5970      180      ""               
+C203       "Capacitor NP"                                      TopLayer    CAP_C_0402                             14.8790      15.1500      90       ""               
+C209       "Capacitor NP"                                      TopLayer    CAP_C_0402                             15.4050      4.5750       0        ""               
+C207       "Capacitor NP"                                      TopLayer    CAP_C_0402                             17.3550      4.5750       0        ""               
+C202       "Capacitor NP"                                      TopLayer    CAP_C_0402                             19.0800      11.0250      270      ""               
+D200       LED_green                                           TopLayer    LED_0402_GREEN                         11.2650      4.5750       0        LED              
+R205       Resistor                                            TopLayer    RES_C_0402                             13.9790      12.7500      270      Resistor         
+R202       Resistor                                            TopLayer    RES_C_0402                             21.0790      7.7750       0        Resistor         
+R207       Resistor                                            TopLayer    RES_C_0402                             19.5050      7.0794       90       Resistor         
+R215       Resistor                                            TopLayer    RES_C_0402                             13.4300      4.5750       0        Resistor         
+R212       Resistor                                            TopLayer    RES_C_0402                             19.0800      8.9740       90       Resistor         
+R200       Resistor                                            TopLayer    RES_C_0402                             14.9290      12.7500      270      Resistor         
+R209       Resistor                                            TopLayer    RES_C_0402                             11.7150      13.7750      0        Resistor         
+R203       Resistor                                            TopLayer    RES_C_0402                             12.1748      10.1941      90       Resistor         
+R218       Resistor                                            TopLayer    RES_C_0402                             9.2985       4.5750       180      Resistor         
+R210       Resistor                                            TopLayer    RES_C_0402                             11.7150      11.6840      180      Resistor         
+C201       "Capacitor NP"                                      TopLayer    CAP_C_0402                             18.8800      15.7250      0        ""               
+C100       "Capacitor NP"                                      TopLayer    CAP_C_0402                             54.9250      6.0500       225      ""               
+C101       "Capacitor NP"                                      TopLayer    CAP_C_0402                             46.5500      14.4000      45       ""               
+C106       "Capacitor NP"                                      TopLayer    CAP_C_0402                             41.1000      11.8600      270      ""               
+C103       "Capacitor NP"                                      TopLayer    CAP_C_0402                             26.1620      14.5542      90       ""               
+D100       LED_yellow                                          TopLayer    LED_0603_Yellow                        74.1680      10.1600      90       LED              
+R201       Resistor                                            TopLayer    RES_C_0402                             18.5800      14.2750      90       Resistor         
+R204       Resistor                                            TopLayer    RES_C_0402                             16.9050      15.7250      0        Resistor         
+R206       Resistor                                            TopLayer    RES_C_0402                             19.4800      14.2750      90       Resistor         
+R208       Resistor                                            TopLayer    RES_C_0402                             20.9920      15.7250      0        Resistor         
+R103       Resistor                                            TopLayer    RES_C_0402                             76.4540      10.1600      270      Resistor         
+R104       Resistor                                            TopLayer    RES_C_0402                             75.3110      10.1600      90       Resistor         
+U206       "SAMD21E QFN-32"                                    TopLayer    QFN-32_5X5_EP3.6x3.6_L                 15.6700      8.1700       180      ""               
+J109       "CON JMPR SOLDER-STRAP OPEN SMD"                    TopLayer    CON_JMPR_1mmX1mm_ROUND_SOLDER-STRAP    37.8380      7.8069       180      ""               
+J110       "CON JMPR SOLDER-STRAP OPEN SMD"                    TopLayer    CON_JMPR_1mmX1mm_ROUND_SOLDER-STRAP    37.8380      9.3318       180      ""               
+TP203      "Test Point No BOM"                                 BottomLayer CON_TP_0.8dia_SMD_with_Test_Jig_Layer  12.4000      7.0000       180      "Test Point"     
+TP200      "Test Point No BOM"                                 BottomLayer TP_3.6X2.7                             2.5400       17.7800      90       "Test Point"     
+TP201      "Test Point No BOM"                                 BottomLayer TP_3.6X2.7                             2.5400       2.5400       90       "Test Point"     
+SW100      "Switch 4 Pin"                                      TopLayer    SW_TACT_SMD_DW_TS604VM1-035CR-R        80.3910      10.1599      270      Switch           
+LABEL1     08-10015                                            BottomLayer 08-10015                               -453.6700    -415.5700    180      ""               
+R102       Resistor                                            TopLayer    RES_C_0402                             55.4790      14.1460      315      Resistor         
+R100       Resistor                                            TopLayer    RES_C_0402                             25.7048      5.2276       0        Resistor         
+R101       Resistor                                            TopLayer    RES_C_0402                             25.2476      14.5542      270      Resistor         

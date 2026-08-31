@@ -1,0 +1,4 @@
+(version 1)
+(rule GNSS_RF_CPW
+  (constraint clearance (min 0.45mm))
+  (condition "A.netName == '/GPS/GNSS_RF_IN' && B.Type == 'Zone'"))

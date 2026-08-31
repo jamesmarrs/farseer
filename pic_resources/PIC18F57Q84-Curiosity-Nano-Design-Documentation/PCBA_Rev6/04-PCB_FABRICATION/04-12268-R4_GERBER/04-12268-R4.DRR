@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: PIC18F57Q84_Curiosity_Nano.PcbDoc   2024-07-18  15:13:33
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : 04-12268-R4-RoundHoles.TXT
+ASCII SlotHoles File : 04-12268-R4-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.2mm (8mil)                                              Round             224       PTH        561.24mm (22.10inch)
+T2      0.6mm (24mil)                                             Round             10        PTH        29.46mm (1.16inch)
+T3      0.6mm (24mil)                                             Slot              4         PTH        36.62mm (1.44inch)
+T4      1mm (39mil)                                               Round             112       PTH        390.81mm (15.39inch)
+T5      1.02mm (40mil)                                            Round             2         PTH        2.54mm (0.10inch)
+T6      2.7mm (106mil)                                            Round             2         PTH        15.24mm (0.60inch)
+T7      2.7mm (106mil)                                            Round             2         NPTH       15.24mm (0.60inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              356
+
+Total Processing Time (hh:mm:ss) : 00:00:00

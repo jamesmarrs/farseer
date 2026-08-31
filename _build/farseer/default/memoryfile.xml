@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="/Users/james/motorsports/projects/farseer/out/farseer/default.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>35044</used>
+      <free>96028</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>12800</length>
+      <used>1877</used>
+      <free>10923</free>
+    </memory>
+  </executable>
+</project>

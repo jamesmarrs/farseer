@@ -1,0 +1,12 @@
+# ninja log v7
+5	16	1784600688703549270	CMakeFiles/clean.additional	246a28ef8cfcbf21
+16	22	1784600688714312490	clean	bf270f6636987552
+2	125	1787819678645154302	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart2.c.p1	20a1085ec967ee8f
+2	130	1787819678645309358	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart3.c.p1	735df32499bdf30b
+1	125	1787819678644853899	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/timer.c.p1	151dfe81b147d549
+1	128	1787819678644728471	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/main.c.p1	c33c6ab02c649f2c
+2	128	1787819678645013831	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/uart1.c.p1	5a4c0b26950dc1bb
+1	131	1787819678644586958	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/gps.c.p1	ab2e0a4d6cb08f9d
+1	131	1787819678644390856	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/bg95.c.p1	9022118d545f349e
+131	1932	1787819678774868641	/Users/james/motorsports/projects/farseer/out/farseer/default.elf	1f80b751b429bac3
+1	70	1787819630183998728	CMakeFiles/farseer_default_default_XC8_compile.dir/Users/james/motorsports/projects/farseer/test/check_deg.c.p1	b68cc314df29d532
