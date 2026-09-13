@@ -1,0 +1,373 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"83 /Users/james/motorsports/projects/farseer/bg95.h
+[s S3 `a 1 `s 1 `s 1 `s 1 `s 1 ]
+[n S3 . valid rssi rsrp sinr rsrq ]
+"151
+[v _BG95_GetSignal `(S3 ~T0 @X0 0 ef ]
+"161
+[v _BG95_GetImei `(*Cuc ~T0 @X0 0 ef ]
+"65 /Users/james/motorsports/projects/farseer/gps.h
+[v _GPS_ConfigAcked `(a ~T0 @X0 0 ef ]
+"164 /Users/james/motorsports/projects/farseer/bg95.h
+[v _BG95_ImeiValid `(a ~T0 @X0 0 ef ]
+"27 /Applications/microchip/xc8/v3.10/pic/include/c99/string.h
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"21 /Users/james/motorsports/projects/farseer/timer.h
+[v _millis `(ul ~T0 @X0 0 ef ]
+"35 /Users/james/motorsports/projects/farseer/gps.h
+[s S2 `a 1 `us 1 `ul 1 `l 1 `l 1 `us 1 `us 1 ]
+[n S2 . valid seq time_cs lat_1e7 lng_1e7 speed_kn_x100 course_x10 ]
+[v F273 `uc ~T0 @X0 -> 18 `i t ]
+"21 /Users/james/motorsports/projects/farseer/telemetry.c
+[v _ring `F273 ~T0 @X0 -> 32 `i s ]
+"22
+[v _head `uc ~T0 @X0 1 s ]
+"23
+[v _depth `uc ~T0 @X0 1 s ]
+"24
+[v _newest_seq `us ~T0 @X0 1 s ]
+"25
+[v _drops `us ~T0 @X0 1 s ]
+"26
+[v _had_lock `a ~T0 @X0 1 s ]
+"30
+[v _last_sent_seq `us ~T0 @X0 1 s ]
+"32
+[v _last_status_ms `ul ~T0 @X0 1 s ]
+"39
+[v _put_u16 `(v ~T0 @X0 1 sf2`*uc`us ]
+"40
+{
+[e :U _put_u16 ]
+"39
+[v _p `*uc ~T0 @X0 1 r1 ]
+[v _v `us ~T0 @X0 1 r2 ]
+"40
+[f ]
+"41
+[e = *U + _p * -> -> 0 `i `x -> -> # *U _p `i `x -> & -> _v `ui -> 255 `ui `uc ]
+"42
+[e = *U + _p * -> -> 1 `i `x -> -> # *U _p `i `x -> & >> -> _v `ui -> 8 `i -> 255 `ui `uc ]
+"43
+[e :UE 5 ]
+}
+"45
+[v _put_u32 `(v ~T0 @X0 1 sf2`*uc`ul ]
+"46
+{
+[e :U _put_u32 ]
+"45
+[v _p `*uc ~T0 @X0 1 r1 ]
+[v _v `ul ~T0 @X0 1 r2 ]
+"46
+[f ]
+"47
+[e = *U + _p * -> -> 0 `i `x -> -> # *U _p `i `x -> & _v -> -> 255 `ui `ul `uc ]
+"48
+[e = *U + _p * -> -> 1 `i `x -> -> # *U _p `i `x -> & >> _v -> 8 `i -> -> 255 `ui `ul `uc ]
+"49
+[e = *U + _p * -> -> 2 `i `x -> -> # *U _p `i `x -> & >> _v -> 16 `i -> -> 255 `ui `ul `uc ]
+"50
+[e = *U + _p * -> -> 3 `i `x -> -> # *U _p `i `x -> & >> _v -> 24 `i -> -> 255 `ui `ul `uc ]
+"51
+[e :UE 6 ]
+}
+"58
+[v _write_header `(v ~T0 @X0 1 sf2`*uc`uc ]
+"59
+{
+[e :U _write_header ]
+"58
+[v _out `*uc ~T0 @X0 1 r1 ]
+[v _n_fixes `uc ~T0 @X0 1 r2 ]
+"59
+[f ]
+"60
+[v _sig `S3 ~T0 @X0 1 a ]
+[e = _sig ( _BG95_GetSignal ..  ]
+"61
+[v _imei `*Cuc ~T0 @X0 1 a ]
+[e = _imei ( _BG95_GetImei ..  ]
+"63
+[v _flags `uc ~T0 @X0 1 a ]
+[e = _flags -> -> 0 `i `uc ]
+"64
+[e $ ! != -> _had_lock `i -> 0 `i 8  ]
+[e =| _flags -> -> 1 `i `uc ]
+[e :U 8 ]
+"65
+[e $ ! != -> ( _GPS_ConfigAcked ..  `i -> 0 `i 9  ]
+[e =| _flags -> -> 2 `i `uc ]
+[e :U 9 ]
+"66
+[e $ ! != -> . _sig 0 `i -> 0 `i 10  ]
+[e =| _flags -> -> 4 `i `uc ]
+[e :U 10 ]
+"67
+[e $ ! != -> ( _BG95_ImeiValid ..  `i -> 0 `i 11  ]
+[e =| _flags -> -> 8 `i `uc ]
+[e :U 11 ]
+"69
+[e = *U + _out * -> -> 0 `i `x -> -> # *U _out `i `x -> -> 1 `i `uc ]
+"70
+[e = *U + _out * -> -> 1 `i `x -> -> # *U _out `i `x _n_fixes ]
+"71
+[e ( _memcpy (3 , , -> &U *U + _out * -> -> 2 `i `x -> -> # *U _out `i `x `*v -> _imei `*Cv -> -> 15 `i `ui ]
+"74
+[e ( _put_u16 (2 , &U *U + _out * -> -> 17 `i `x -> -> # *U _out `i `x -> . _sig 1 `us ]
+"75
+[e = *U + _out * -> -> 19 `i `x -> -> # *U _out `i `x _flags ]
+"76
+[e = *U + _out * -> -> 20 `i `x -> -> # *U _out `i `x -> -> 0 `i `uc ]
+"77
+[e ( _put_u16 (2 , &U *U + _out * -> -> 21 `i `x -> -> # *U _out `i `x _drops ]
+"78
+[e :UE 7 ]
+}
+"82
+[v _Telemetry_Init `(v ~T0 @X0 1 ef ]
+"83
+{
+[e :U _Telemetry_Init ]
+[f ]
+"84
+[e = _head -> -> 0 `i `uc ]
+"85
+[e = _depth -> -> 0 `i `uc ]
+"86
+[e = _newest_seq -> -> 0 `i `us ]
+"87
+[e = _drops -> -> 0 `i `us ]
+"88
+[e = _had_lock -> -> 0 `i `a ]
+"89
+[e = _last_sent_seq -> -> 0 `i `us ]
+"90
+[e = _last_status_ms ( _millis ..  ]
+"91
+[e :UE 12 ]
+}
+"93
+[v _Telemetry_LinkReady `(v ~T0 @X0 1 ef ]
+"94
+{
+[e :U _Telemetry_LinkReady ]
+[f ]
+"97
+[e = _drops -> -> 0 `i `us ]
+"98
+[e :UE 13 ]
+}
+"100
+[v _Telemetry_PushFix `(v ~T0 @X0 1 ef1`*CS2 ]
+"101
+{
+[e :U _Telemetry_PushFix ]
+"100
+[v _fix `*CS2 ~T0 @X0 1 r1 ]
+"101
+[f ]
+"102
+[e $ ! || == _fix -> -> -> 0 `i `*v `*CS2 ! != -> . *U _fix 0 `i -> 0 `i 15  ]
+{
+"103
+[e $UE 14  ]
+"104
+}
+[e :U 15 ]
+"106
+[v _rec `*uc ~T0 @X0 1 a ]
+[e = _rec &U *U + &U _ring * -> _head `ux -> * -> # *U &U *U &U _ring `ui -> -> 18 `i `ui `ux ]
+"107
+[e ( _put_u16 (2 , &U *U + _rec * -> -> 0 `i `x -> -> # *U _rec `i `x . *U _fix 1 ]
+"108
+[e ( _put_u32 (2 , &U *U + _rec * -> -> 2 `i `x -> -> # *U _rec `i `x . *U _fix 2 ]
+"109
+[e ( _put_u32 (2 , &U *U + _rec * -> -> 6 `i `x -> -> # *U _rec `i `x -> . *U _fix 3 `ul ]
+"110
+[e ( _put_u32 (2 , &U *U + _rec * -> -> 10 `i `x -> -> # *U _rec `i `x -> . *U _fix 4 `ul ]
+"111
+[e ( _put_u16 (2 , &U *U + _rec * -> -> 14 `i `x -> -> # *U _rec `i `x . *U _fix 5 ]
+"112
+[e ( _put_u16 (2 , &U *U + _rec * -> -> 16 `i `x -> -> # *U _rec `i `x . *U _fix 6 ]
+"114
+[e = _head -> % + -> _head `ui -> 1 `ui -> -> 32 `i `ui `uc ]
+"115
+[e $ ! < -> _depth `i -> 32 `i 16  ]
+{
+"116
+[e ++ _depth -> -> 1 `i `uc ]
+"117
+}
+[e $U 17  ]
+[e :U 16 ]
+{
+"121
+[e ++ _drops -> -> 1 `i `us ]
+"122
+}
+[e :U 17 ]
+"123
+[e = _newest_seq . *U _fix 1 ]
+"124
+[e = _had_lock -> -> 1 `i `a ]
+"125
+[e :UE 14 ]
+}
+"127
+[v _Telemetry_BuildPacket `(us ~T0 @X0 1 ef2`*uc`us ]
+"128
+{
+[e :U _Telemetry_BuildPacket ]
+"127
+[v _out `*uc ~T0 @X0 1 r1 ]
+[v _max_len `us ~T0 @X0 1 r2 ]
+"128
+[f ]
+"129
+[e $ ! || == _out -> -> -> 0 `i `*v `*uc < -> _max_len `ui -> -> 23 `i `ui 19  ]
+{
+"130
+[e ) -> -> 0 `i `us ]
+[e $UE 18  ]
+"131
+}
+[e :U 19 ]
+"135
+[v _delta `us ~T0 @X0 1 a ]
+[e = _delta -> - -> _newest_seq `ui -> _last_sent_seq `ui `us ]
+"136
+[v _n_new `uc ~T0 @X0 1 a ]
+[e = _n_new -> ? > -> _delta `ui -> _depth `ui : -> _depth `i -> -> _delta `uc `i `uc ]
+"138
+[e $ ! == -> _n_new `i -> 0 `i 20  ]
+{
+"142
+[e $ ! < - ( _millis ..  _last_status_ms -> -> -> 5000 `i `l `ul 21  ]
+{
+"143
+[e ) -> -> 0 `i `us ]
+[e $UE 18  ]
+"144
+}
+[e :U 21 ]
+"145
+[e = _last_status_ms ( _millis ..  ]
+"146
+[e ( _write_header (2 , _out -> -> 0 `i `uc ]
+"147
+[e ) -> -> 23 `i `us ]
+[e $UE 18  ]
+"148
+}
+[e :U 20 ]
+"162
+[v _oldest_seq `us ~T0 @X0 1 a ]
+[e = _oldest_seq -> + - -> _newest_seq `ui -> _depth `ui -> 1 `ui `us ]
+"163
+[v _want_start `us ~T0 @X0 1 a ]
+[e = _want_start -> - + -> _last_sent_seq `ui -> 1 `ui -> -> 6 `i `ui `us ]
+"169
+[v _start_off `us ~T0 @X0 1 a ]
+[e = _start_off -> - -> _want_start `ui -> _oldest_seq `ui `us ]
+"170
+[e $ ! >= -> _start_off `ui -> _depth `ui 22  ]
+{
+"171
+[e = _start_off -> -> 0 `i `us ]
+"172
+}
+[e :U 22 ]
+"174
+[v _n `us ~T0 @X0 1 a ]
+[e = _n -> - -> _depth `ui -> _start_off `ui `us ]
+"175
+[e $ ! > -> _n `ui -> -> 24 `i `ui 23  ]
+{
+"176
+[e = _n -> -> 24 `i `us ]
+"177
+}
+[e :U 23 ]
+"179
+[v _fit `us ~T0 @X0 1 a ]
+[e = _fit -> / - -> _max_len `ui -> -> 23 `i `ui -> -> 18 `i `ui `us ]
+"180
+[e $ ! > -> _n `ui -> _fit `ui 24  ]
+{
+"181
+[e = _n _fit ]
+"182
+}
+[e :U 24 ]
+"183
+[e $ ! == -> _n `ui -> -> 0 `i `ui 25  ]
+{
+"184
+[e ) -> -> 0 `i `us ]
+[e $UE 18  ]
+"185
+}
+[e :U 25 ]
+"187
+[e ( _write_header (2 , _out -> _n `uc ]
+"191
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> % + -> - + -> _head `i -> 32 `i -> _depth `i `ui -> _start_off `ui -> -> 32 `i `ui `uc ]
+"192
+[v _p `*uc ~T0 @X0 1 a ]
+[e = _p &U *U + _out * -> -> 23 `i `x -> -> # *U _out `i `x ]
+"193
+{
+[v _i `us ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `us ]
+[e $U 29  ]
+[e :U 26 ]
+{
+"194
+[e ( _memcpy (3 , , -> _p `*v -> &U *U + &U _ring * -> _idx `ux -> * -> # *U &U *U &U _ring `ui -> -> 18 `i `ui `ux `*Cv -> -> 18 `i `ui ]
+"195
+[e =+ _p * -> -> 18 `i `x -> -> # *U _p `i `x ]
+"196
+[e = _idx -> % + -> _idx `ui -> 1 `ui -> -> 32 `i `ui `uc ]
+"197
+}
+[e ++ _i -> -> 1 `i `us ]
+[e :U 29 ]
+[e $ < -> _i `ui -> _n `ui 26  ]
+[e :U 27 ]
+}
+"201
+[e = _last_sent_seq -> - + + -> _oldest_seq `ui -> _start_off `ui -> _n `ui -> 1 `ui `us ]
+"202
+[e = _last_status_ms ( _millis ..  ]
+"204
+[e ) -> + -> -> 23 `i `ui * -> _n `ui -> -> 18 `i `ui `us ]
+[e $UE 18  ]
+"205
+[e :UE 18 ]
+}
+"207
+[v _Telemetry_RingDepth `(uc ~T0 @X0 1 ef ]
+"208
+{
+[e :U _Telemetry_RingDepth ]
+[f ]
+"209
+[e ) _depth ]
+[e $UE 30  ]
+"210
+[e :UE 30 ]
+}
+"212
+[v _Telemetry_DropCount `(us ~T0 @X0 1 ef ]
+"213
+{
+[e :U _Telemetry_DropCount ]
+[f ]
+"214
+[e ) _drops ]
+[e $UE 31  ]
+"215
+[e :UE 31 ]
+}

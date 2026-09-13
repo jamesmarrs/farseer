@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# KiCad: editor lock files, autosave/backup copies, local-history plugin repo
+ki_cad_project/**/~*.lck
+ki_cad_project/**/*.bak
+ki_cad_project/**/_autosave-*
+ki_cad_project/**/fp-info-cache
+ki_cad_project/farseer/.history/

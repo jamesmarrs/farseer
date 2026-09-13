@@ -1,0 +1,30 @@
+FARSEER - CONTROLLED IMPEDANCE SPECIFICATION (generated, do not edit)
+
+Fab: JLCPCB, 4-layer, 1.6 mm. Select 'Impedance Control' = YES and the
+stackup JLC04161H-7628 at order time. The trace below is sized for this
+stackup only; JLC's default 4-layer build is NOT equivalent.
+
+Controlled net
+  Net name              /GPS/GNSS_RF_IN
+  Layer                 Top (F.Cu, L1)
+  Structure             Coplanar waveguide with ground (single-ended)
+  Reference plane       L2 (In1.Cu, GND)
+  Trace width           0.34 mm  (base width as drawn; apply your etch compensation)
+  Gap to coplanar GND   0.45 mm  (both sides, F.Cu GND pour)
+  Target impedance      50 ohm single-ended
+  Tolerance             +/-10 %
+  Frequency             1.56-1.61 GHz (GNSS L1 band)
+  Marking               text note on User.Comments beside the trace
+
+Stackup as drawn in farseer.kicad_pcb
+  layer            type      thickness  material / er
+  F.Cu             copper       0.035   
+  dielectric 1     prepreg     0.2104   FR4 7628 (JLC04161H-7628)  er 4.4
+  In1.Cu           copper      0.0152   
+  dielectric 2     core         1.065   FR4 core (JLC04161H-7628)  er 4.6
+  In2.Cu           copper      0.0152   
+  dielectric 3     prepreg     0.2104   FR4 7628 (JLC04161H-7628)  er 4.4
+  B.Cu             copper       0.035   
+
+Design basis: scripts/rf_impedance.py (field solve) and
+docs/gnss-support-circuit.md section 5 'ESD and layout'.

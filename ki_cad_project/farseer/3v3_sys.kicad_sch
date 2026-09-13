@@ -1328,10 +1328,10 @@
 		(uuid "047f89e8-5633-4b32-9bfa-03084c54ad8c")
 	)
 	(junction
-		(at 133.35 95.25)
+		(at 129.54 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0675972b-8339-4bf3-99f2-9c91bcdd4738")
+		(uuid "0a4a45c7-5525-46b1-b6a6-d9d6392eb915")
 	)
 	(junction
 		(at 209.55 106.68)
@@ -1441,16 +1441,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 95.25) (xy 133.35 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b8e2d47-1f6a-4c93-a2e8-7d4b9c0f3a56")
-	)
-	(wire
-		(pts
 			(xy 209.55 106.68) (xy 209.55 107.95)
 		)
 		(stroke
@@ -1481,6 +1471,16 @@
 	)
 	(wire
 		(pts
+			(xy 132.08 100.33) (xy 133.35 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60db1f40-e5ee-4551-adf5-71f846322223")
+	)
+	(wire
+		(pts
 			(xy 165.1 105.41) (xy 165.1 106.68)
 		)
 		(stroke
@@ -1488,6 +1488,16 @@
 			(type default)
 		)
 		(uuid "6e69f27f-719e-46f6-bc77-1fdc02485f35")
+	)
+	(wire
+		(pts
+			(xy 129.54 95.25) (xy 129.54 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70deeb76-5a32-465c-a5ff-f3d053f92382")
 	)
 	(wire
 		(pts
@@ -1581,6 +1591,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 107.95) (xy 132.08 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0ef4905-a010-4bd7-a42f-9471d996f3e0")
+	)
+	(wire
+		(pts
 			(xy 204.47 106.68) (xy 209.55 106.68)
 		)
 		(stroke
@@ -1591,13 +1611,23 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 95.25) (xy 133.35 95.25)
+			(xy 125.73 95.25) (xy 129.54 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "d24ff136-cacb-4440-9899-5807221ae00d")
+	)
+	(wire
+		(pts
+			(xy 129.54 95.25) (xy 133.35 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5436f11-0646-4633-8c7f-2f60256d264f")
 	)
 	(wire
 		(pts
@@ -1628,6 +1658,118 @@
 			(type default)
 		)
 		(uuid "f9758968-820b-48e2-bba7-55b1ff004017")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 132.08 104.14 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0dd83489-85dc-4bb9-a069-f093d1c07e76")
+		(property "Reference" "R51"
+			(at 135.636 103.124 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 135.636 105.156 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 131.064 103.886 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 132.08 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "AC0603FR-07100KL"
+			(at 132.08 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 132.08 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Design Notes" "Series resistor between +12VF and U2 SHDN. LMR16006 datasheet sec 8.3.4: when shutdown is not used the pin 'may be tied to VIN via 100 kOhm resistor', and 100 kOhm or larger is recommended whenever a voltage above logic level is applied 'to protect the device'. SHDN abs max is 65 V and the SM8S26A clamp on +12VF is ~42 V, so this is datasheet compliance rather than transient survival. SHDN rising threshold 1.25 V typ; the internal pull-up current (about 1-4 uA) drops well under 0.5 V across 100k, so U2 is enabled at every valid input voltage."
+			(at 132.08 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0a9350fe-1802-465d-b544-1cfa39e11f22")
+		)
+		(pin "2"
+			(uuid "d1065a94-9c29-4d68-98c3-bfecef0fe4e6")
+		)
+		(instances
+			(project "farseer"
+				(path "/b50562dd-c7d3-426b-8c59-03f29968ae16/86904090-babb-411a-8c68-882bbb5c2231"
+					(reference "R51")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1833,7 +1975,7 @@
 		(dnp no)
 		(uuid "34b486e9-21a4-408e-b4d4-185e1117abbb")
 		(property "Reference" "C38"
-			(at 128.27 97.79 0)
+			(at 121.412 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1844,7 +1986,7 @@
 			)
 		)
 		(property "Value" "0u1"
-			(at 128.27 99.568 0)
+			(at 121.412 103.378 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2173,7 +2315,7 @@
 		(dnp no)
 		(uuid "5df9eb6d-c15e-4de0-a468-df2af4f2e92f")
 		(property "Reference" "C37"
-			(at 118.11 97.79 0)
+			(at 110.49 101.854 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2184,7 +2326,7 @@
 			)
 		)
 		(property "Value" "4u7"
-			(at 118.11 99.568 0)
+			(at 110.49 103.632 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

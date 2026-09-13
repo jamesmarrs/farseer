@@ -142,14 +142,19 @@ modulator pole, and Equation 48 for the high-frequency pole against the
 | 5 ms | 0.44 A |
 | 10 ms | 0.22 A |
 
-Target **≥ 5 ms**, keeping the extra inrush under half an amp and clear of
-the current limit. Confirm what the TPS54560-Q1's SS/TR arrangement in KiCad
-actually delivers — the constants are TI-specific and must be read from the
-datasheet, not assumed.
+The TPS54560-Q1 has **no SS/TR pin** — soft-start is internal and fixed by the
+switching frequency (datasheet §7.5, "Internal soft-start time": 2.1 ms typ at
+f_SW = 500 kHz, 10 % → 90 %; Figure 21 for the curve). `R46` sets 500 kHz, so
+expect **≈ 2 ms**, i.e. roughly **1 A of added inrush** on top of the load
+while the reservoir charges. That is well inside the 6.3 A minimum switch
+current limit (§7.5, "Current limit threshold"), and the modem draws almost
+nothing until the rail is up, so the 2 ms ramp is acceptable; the ≥ 5 ms row
+above is not reachable without lowering f_SW, and there is no reason to. Verify
+the ramp and peak inductor current on the bench at bring-up.
 
 **`EN` sequencing still works.** Soft-start of a few milliseconds is
 irrelevant next to the modem's own multi-second boot, so gating the rail from
-`CELL_PWR_EN` (PIC RE0, through the series resistor into `U3` EN) behaves as
+`CELL_PWR_EN` (PIC RC7, through the series resistor into `U3` EN) behaves as
 described in [interconnect-and-pin-budget.md](interconnect-and-pin-budget.md).
 The EN pull-down (see its Design Note in KiCad) keeps the card off while the
 PIC is in reset.

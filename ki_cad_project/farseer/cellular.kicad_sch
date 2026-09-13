@@ -6184,7 +6184,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "TPD4E02B04DQAR"
 			(at 240.03 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -6195,7 +6195,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Texas Instruments"
 			(at 240.03 92.71 0)
 			(hide yes)
 			(show_name no)

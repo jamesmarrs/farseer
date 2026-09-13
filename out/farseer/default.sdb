@@ -3,48 +3,51 @@
 [d edition pro ]
 [d chip 18F57Q84 ]
 [d frameptr 1249 ]
-"57 /Users/james/motorsports/projects/farseer/bg95.c
-[e E24090 . `uc
+"65 /Users/james/motorsports/projects/farseer/bg95.c
+[e E24105 . `uc
 ATS_IDLE 0
 ATS_PENDING 1
 ATS_DONE 2
 ]
-"63
-[e E24103 . `uc
+"66
+[e E24098 . `uc
+AT_BUSY 0
+AT_OK 1
+AT_FAIL 2
+AT_RETRY 3
+AT_TMO 4
+]
+"71
+[e E24119 . `uc
 DROP_NONE 0
 DROP_SOCKET 1
 DROP_PDP 2
 ]
-"156
-[e E24084 . `uc
-AT_BUSY 0
-AT_OK 1
-AT_FAIL 2
-AT_TMO 3
-]
-"314
-[e E24156 . `uc
+"391
+[e E24180 . `uc
 ST_PWR_HOLD 0
 ST_PWR_WAIT 1
 ST_ATE0 2
-ST_CFG_SIMDET 3
-ST_CFG_SIMSTAT 4
-ST_CPIN 5
-ST_CFG_SCANMODE 6
-ST_CFG_IOTOPMODE 7
-ST_CFG_PSM 8
-ST_CFG_EDRX 9
-ST_CFUN 10
-ST_CGATT 11
-ST_QICSGP 12
-ST_QIACT 13
-ST_QICLOSE 14
-ST_QIOPEN 15
-ST_READY 16
-ST_BACKOFF 17
+ST_GSN 3
+ST_CFG_SIMDET 4
+ST_CFG_SIMSTAT 5
+ST_CPIN 6
+ST_CFG_SCANMODE 7
+ST_CFG_IOTOPMODE 8
+ST_CFG_PSM 9
+ST_CFG_EDRX 10
+ST_CFUN 11
+ST_CGATT 12
+ST_CFG_QISDE 13
+ST_QICSGP 14
+ST_QIACT 15
+ST_QICLOSE 16
+ST_QIOPEN 17
+ST_READY 18
+ST_BACKOFF 19
 ]
-"315
-[e E24176 . `uc
+"392
+[e E24202 . `uc
 RS_IDLE 0
 RS_SEND_PROMPT 1
 RS_SEND_WAIT 2
@@ -57,8 +60,6 @@ SIGNED 1
 SKIP 2
 CONV_DONE 4
 ]
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/__fpclassifyf.c
-[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 "7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/__strtoxl.c
@@ -82,37 +83,27 @@ CONV_DONE 4
 "7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 "193 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/doprnt.c
-[v _pad pad `(i  1 s 2 pad ]
+[v _pad pad `(v  1 s 1 pad ]
 "476
-[v _ctoa ctoa `(i  1 s 2 ctoa ]
+[v _ctoa ctoa `(v  1 s 1 ctoa ]
 "513
-[v _dtoa dtoa `(i  1 s 2 dtoa ]
-"587
-[v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
 "942
-[v _stoa stoa `(i  1 s 2 stoa ]
+[v _stoa stoa `(v  1 s 1 stoa ]
 "1001
-[v _utoa utoa `(i  1 s 2 utoa ]
+[v _utoa utoa `(v  1 s 1 utoa ]
 "1055
-[v _xtoa xtoa `(i  1 s 2 xtoa ]
+[v _xtoa xtoa `(v  1 s 1 xtoa ]
 "1158
 [v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
 "1177
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 "1817
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 "4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-"15 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
 "62 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/float.c
 [v ___ftpack __ftpack `(f  1 e 4 0 ]
-"3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/floorf.c
-[v _floorf floorf `(f  1 e 4 0 ]
-"43 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
 "86 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 4 0 ]
 "54 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/ftdiv.c
@@ -121,12 +112,6 @@ CONV_DONE 4
 [v ___ftmul __ftmul `(f  1 e 4 0 ]
 "19 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/ftsub.c
 [v ___ftsub __ftsub `(f  1 e 4 0 ]
-"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/isdigit.c
-[v _isdigit isdigit `(i  1 e 2 0 ]
-"8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/isxdigit.c
-[v _isxdigit isxdigit `(i  1 e 2 0 ]
-"1 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/labs.c
-[v _labs labs `(l  1 e 4 0 ]
 "7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
 "9 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/lodiv.c
@@ -145,14 +130,12 @@ CONV_DONE 4
 [v _memcpy memcpy `(*.39v  1 e 3 0 ]
 "5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/memmove.c
 [v _memmove memmove `(*.39v  1 e 3 0 ]
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nanf.c
-[v _nanf nanf `(f  1 e 4 0 ]
+"3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/memset.c
+[v _memset memset `(*.39v  1 e 3 0 ]
 "8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 "8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
-"13 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_snprintf.c
-[v _snprintf snprintf `(i  1 e 2 0 ]
 "9 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/printf.c
@@ -169,18 +152,12 @@ CONV_DONE 4
 [v _strchr strchr `(*.39uc  1 e 3 0 ]
 "3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
-"3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strcpy.c
-[v _strcpy strcpy `(*.39uc  1 e 3 0 ]
 "5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
 "3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strncmp.c
 [v _strncmp strncmp `(i  1 e 2 0 ]
 "4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strstr.c
 [v _strstr strstr `(*.39uc  1 e 3 0 ]
-"100 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strtof.c
-[v _strtof strtof `(f  1 e 4 0 ]
-"8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/toupper.c
-[v _toupper toupper `(i  1 e 2 0 ]
 "15 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/Umul24.c
@@ -189,94 +166,136 @@ CONV_DONE 4
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"10 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"72 /Users/james/motorsports/projects/farseer/bg95.c
+"85 /Users/james/motorsports/projects/farseer/bg95.c
 [v _at_wait at_wait `(v  1 s 1 at_wait ]
-"84
+"99
 [v _at_submit at_submit `(v  1 s 1 at_submit ]
-"92
+"111
+[v _at_flush_rx at_flush_rx `(v  1 s 1 at_flush_rx ]
+"120
 [v _bg95_handle_urc bg95_handle_urc `(v  1 s 1 bg95_handle_urc ]
-"116
+"144
 [v _bg95_pump bg95_pump `(v  1 s 1 bg95_pump ]
-"156
-[v _at_poll at_poll `(E24084  1 s 1 at_poll ]
-"201
+"195
+[v _at_poll at_poll `(E24098  1 s 1 at_poll ]
+"243
+[v _parse_gsn parse_gsn `(v  1 s 1 parse_gsn ]
+"276
 [v _parse_qcsq parse_qcsq `(v  1 s 1 parse_qcsq ]
-"249
+"324
 [v _parse_qird parse_qird `(a  1 s 1 parse_qird ]
-"325
+"401
 [v _enter_backoff enter_backoff `(v  1 s 1 enter_backoff ]
-"338
+"414
 [v _step step `(v  1 s 1 step ]
-"362
+"438
 [v _step_optional step_optional `(v  1 s 1 step_optional ]
-"380
-[v _begin_head_send begin_head_send `(v  1 s 1 begin_head_send ]
-"389
+"456
+[v _begin_send begin_send `(v  1 s 1 begin_send ]
+"469
+[v _end_send end_send `(v  1 s 1 end_send ]
+"475
+[v _note_send_ok note_send_ok `(v  1 s 1 note_send_ok ]
+"509
+[v _note_send_failed note_send_failed `(v  1 s 1 note_send_failed ]
+"522
 [v _ready_service ready_service `(v  1 s 1 ready_service ]
-"425
+"555
 [v _ready_task ready_task `(v  1 s 1 ready_task ]
-"530
+"672
 [v _BG95_Init BG95_Init `(v  1 e 1 0 ]
-"566
-[v _BG95_QueueDatagram BG95_QueueDatagram `(a  1 e 1 0 ]
-"62 /Users/james/motorsports/projects/farseer/bg95.h
-[s S83 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
-"579 /Users/james/motorsports/projects/farseer/bg95.c
-[v _BG95_GetSignal BG95_GetSignal `(S83  1 e 9 0 ]
-"584
+"707
+[v _BG95_IsReady BG95_IsReady `(a  1 e 1 0 ]
+"712
+[v _BG95_ClaimTxBuffer BG95_ClaimTxBuffer `(*.39uc  1 e 3 0 ]
+"725
+[v _BG95_CommitTxBuffer BG95_CommitTxBuffer `(v  1 e 1 0 ]
+"83 /Users/james/motorsports/projects/farseer/bg95.h
+[s S96 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
+"734 /Users/james/motorsports/projects/farseer/bg95.c
+[v _BG95_GetSignal BG95_GetSignal `(S96  1 e 9 0 ]
+"739
+[v _BG95_GetTxStats BG95_GetTxStats `(v  1 e 1 0 ]
+"746
+[v _BG95_GetImei BG95_GetImei `(*.39Cuc  1 e 3 0 ]
+"751
+[v _BG95_ImeiValid BG95_ImeiValid `(a  1 e 1 0 ]
+"756
 [v _BG95_Task BG95_Task `(v  1 e 1 0 ]
-"53 /Users/james/motorsports/projects/farseer/gps.c
-[v _store_time store_time `(v  1 s 1 store_time ]
-"65
+"58 /Users/james/motorsports/projects/farseer/gps.c
+[v _parse_fixed parse_fixed `(ul  1 s 4 parse_fixed ]
+"84
+[v _parse_fixed_signed parse_fixed_signed `(l  1 s 4 parse_fixed_signed ]
+"99
+[v _time_to_cs time_to_cs `(ul  1 s 4 time_to_cs ]
+"125
+[v _print_x10 print_x10 `(v  1 s 1 print_x10 ]
+"131
+[v _print_x100 print_x100 `(v  1 s 1 print_x100 ]
+"139
 [v _log_due log_due `(a  1 s 1 log_due ]
-"75
-[v _GPS_LastTime GPS_LastTime `(*.39Cuc  1 e 3 0 ]
-"80
+"149
 [v _GPS_GetFix GPS_GetFix `(v  1 e 1 0 ]
-"87
+"156
 [v _GPS_ConfigAcked GPS_ConfigAcked `(a  1 e 1 0 ]
-"92
+"161
 [v _GPS_RxStats GPS_RxStats `(v  1 e 1 0 ]
-"103
+"172
 [v _hex_val hex_val `(c  1 s 1 hex_val ]
-"115
+"184
 [v _checksum_ok checksum_ok `(uc  1 s 1 checksum_ok ]
-"143
+"212
 [v _split_fields split_fields `(uc  1 s 1 split_fields ]
-"168
+"237
 [v _to_deg_1e7 to_deg_1e7 `(l  1 s 4 to_deg_1e7 ]
-"214
-[v _GPS_FormatDeg GPS_FormatDeg `(v  1 e 1 0 ]
-"234
+"286
+[v _format_deg format_deg `(v  1 s 1 format_deg ]
+"306
 [v _fix_quality_str fix_quality_str `(*.32Cuc  1 s 3 fix_quality_str ]
-"247
+"319
 [v _print_time print_time `(v  1 s 1 print_time ]
-"257
+"329
 [v _print_date print_date `(v  1 s 1 print_date ]
-"269
+"341
 [v _tick_nav_rate tick_nav_rate `(v  1 s 1 tick_nav_rate ]
-"288
+"360
 [v _parse_rmc parse_rmc `(v  1 s 1 parse_rmc ]
-"345
+"416
 [v _parse_gga parse_gga `(v  1 s 1 parse_gga ]
-"382
+"459
 [v _parse_line parse_line `(v  1 s 1 parse_line ]
-"413
+"490
 [v _ubx_send ubx_send `(v  1 s 1 ubx_send ]
-"439
+"516
 [v _GPS_Configure GPS_Configure `(v  1 e 1 0 ]
-"479
+"556
 [v _ubx_rx ubx_rx `(v  1 s 1 ubx_rx ]
-"520
+"597
 [v _GPS_Process GPS_Process `(v  1 e 1 0 ]
-"55 /Users/james/motorsports/projects/farseer/main.c
+"76 /Users/james/motorsports/projects/farseer/main.c
 [v _on_downlink on_downlink `(v  1 s 1 on_downlink ]
-"76
+"97
 [v _Clock_Init Clock_Init `(v  1 s 1 Clock_Init ]
-"90
+"111
 [v _main main `(i  1 e 2 0 ]
+"39 /Users/james/motorsports/projects/farseer/telemetry.c
+[v _put_u16 put_u16 `(v  1 s 1 put_u16 ]
+"45
+[v _put_u32 put_u32 `(v  1 s 1 put_u32 ]
+"58
+[v _write_header write_header `(v  1 s 1 write_header ]
+"82
+[v _Telemetry_Init Telemetry_Init `(v  1 e 1 0 ]
+"93
+[v _Telemetry_LinkReady Telemetry_LinkReady `(v  1 e 1 0 ]
+"100
+[v _Telemetry_PushFix Telemetry_PushFix `(v  1 e 1 0 ]
+"127
+[v _Telemetry_BuildPacket Telemetry_BuildPacket `(us  1 e 2 0 ]
+"207
+[v _Telemetry_RingDepth Telemetry_RingDepth `(uc  1 e 1 0 ]
+"212
+[v _Telemetry_DropCount Telemetry_DropCount `(us  1 e 2 0 ]
 "23 /Users/james/motorsports/projects/farseer/timer.c
 [v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
 "43
@@ -289,13 +308,15 @@ CONV_DONE 4
 [v _UART1_Write UART1_Write `(v  1 e 1 0 ]
 "52
 [v _putch putch `(v  1 e 1 0 ]
-"32 /Users/james/motorsports/projects/farseer/uart2.c
+"39 /Users/james/motorsports/projects/farseer/uart2.c
 [v _UART2_Init UART2_Init `(v  1 e 1 0 ]
-"63
-[v _UART2_Write UART2_Write `(v  1 e 1 0 ]
 "71
+[v _UART2_Write UART2_Write `(v  1 e 1 0 ]
+"79
 [v _UART2_TryReadByte UART2_TryReadByte `(a  1 e 1 0 ]
-"83
+"91
+[v _UART2_RxDropped UART2_RxDropped `(us  1 e 2 0 ]
+"103
 [v _UART2_RX_ISR UART2_RX_ISR `IIH(v  1 e 1 0 ]
 "33 /Users/james/motorsports/projects/farseer/uart3.c
 [v _UART3_Init UART3_Init `(v  1 e 1 0 ]
@@ -315,16 +336,14 @@ CONV_DONE 4
 "154
 [v _flags flags `uc  1 s 1 flags ]
 "185
-[v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
-"189
-[v _nout nout `i  1 s 2 nout ]
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/errno.c
 [v _errno errno `i  1 e 2 0 ]
-[s S661 . 1 `uc 1 NDIV 1 0 :4:0 
+[s S754 . 1 `uc 1 NDIV 1 0 :4:0 
 `uc 1 NOSC 1 0 :3:4 
 ]
 "5283 /Users/james/.mchp_packs/Microchip/PIC18F-Q_DFP/1.30.487/xc8/pic/include/proc/pic18f57q84.h
-[s S664 . 1 `uc 1 NDIV0 1 0 :1:0 
+[s S757 . 1 `uc 1 NDIV0 1 0 :1:0 
 `uc 1 NDIV1 1 0 :1:1 
 `uc 1 NDIV2 1 0 :1:2 
 `uc 1 NDIV3 1 0 :1:3 
@@ -332,9 +351,9 @@ CONV_DONE 4
 `uc 1 NOSC1 1 0 :1:5 
 `uc 1 NOSC2 1 0 :1:6 
 ]
-[u S672 . 1 `S661 1 . 1 0 `S664 1 . 1 0 ]
-[v _OSCCON1bits OSCCON1bits `VES672  1 e 1 @173 ]
-[s S687 . 1 `uc 1 . 1 0 :3:0 
+[u S765 . 1 `S754 1 . 1 0 `S757 1 . 1 0 ]
+[v _OSCCON1bits OSCCON1bits `VES765  1 e 1 @173 ]
+[s S780 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOSCR 1 0 :1:3 
 `uc 1 ORDY 1 0 :1:4 
 `uc 1 . 1 0 :1:5 
@@ -342,19 +361,19 @@ CONV_DONE 4
 `uc 1 CSWHOLD 1 0 :1:7 
 ]
 "5418
-[u S694 . 1 `S687 1 . 1 0 ]
-[v _OSCCON3bits OSCCON3bits `VES694  1 e 1 @175 ]
-[s S643 . 1 `uc 1 HFFRQ 1 0 :4:0 
+[u S787 . 1 `S780 1 . 1 0 ]
+[v _OSCCON3bits OSCCON3bits `VES787  1 e 1 @175 ]
+[s S736 . 1 `uc 1 HFFRQ 1 0 :4:0 
 ]
 "5522
-[s S645 . 1 `uc 1 FRQ0 1 0 :1:0 
+[s S738 . 1 `uc 1 FRQ0 1 0 :1:0 
 `uc 1 FRQ1 1 0 :1:1 
 `uc 1 FRQ2 1 0 :1:2 
 `uc 1 FRQ3 1 0 :1:3 
 ]
-[u S650 . 1 `S643 1 . 1 0 `S645 1 . 1 0 ]
-[v _OSCFRQbits OSCFRQbits `VES650  1 e 1 @177 ]
-[s S704 . 1 `uc 1 PLLR 1 0 :1:0 
+[u S743 . 1 `S736 1 . 1 0 `S738 1 . 1 0 ]
+[v _OSCFRQbits OSCFRQbits `VES743  1 e 1 @177 ]
+[s S797 . 1 `uc 1 PLLR 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADOR 1 0 :1:2 
 `uc 1 SOR 1 0 :1:3 
@@ -364,8 +383,8 @@ CONV_DONE 4
 `uc 1 EXTOR 1 0 :1:7 
 ]
 "5613
-[u S713 . 1 `S704 1 . 1 0 ]
-[v _OSCSTATbits OSCSTATbits `VES713  1 e 1 @178 ]
+[u S806 . 1 `S797 1 . 1 0 ]
+[v _OSCSTATbits OSCSTATbits `VES806  1 e 1 @178 ]
 "23743
 [v _RA1PPS RA1PPS `VEuc  1 e 1 @514 ]
 "24893
@@ -380,32 +399,32 @@ CONV_DONE 4
 [v _U3RXPPS U3RXPPS `VEuc  1 e 1 @630 ]
 "32278
 [v _U1TXB U1TXB `VEuc  1 e 1 @675 ]
-[s S1170 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S1373 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 ]
 "32510
-[s S1175 . 1 `uc 1 U1MODE 1 0 :4:0 
+[s S1378 . 1 `uc 1 U1MODE 1 0 :4:0 
 `uc 1 U1RXEN 1 0 :1:4 
 `uc 1 U1TXEN 1 0 :1:5 
 `uc 1 U1ABDEN 1 0 :1:6 
 `uc 1 U1BRGS 1 0 :1:7 
 ]
-[s S1181 . 1 `uc 1 U1MODE0 1 0 :1:0 
+[s S1384 . 1 `uc 1 U1MODE0 1 0 :1:0 
 `uc 1 U1MODE1 1 0 :1:1 
 `uc 1 U1MODE2 1 0 :1:2 
 `uc 1 U1MODE3 1 0 :1:3 
 ]
-[s S1186 . 1 `uc 1 MODE 1 0 :4:0 
+[s S1389 . 1 `uc 1 MODE 1 0 :4:0 
 `uc 1 RXEN 1 0 :1:4 
 `uc 1 TXEN 1 0 :1:5 
 `uc 1 ABDEN 1 0 :1:6 
 `uc 1 BRGS 1 0 :1:7 
 ]
-[u S1192 . 1 `S1170 1 . 1 0 `S1175 1 . 1 0 `S1181 1 . 1 0 `S1186 1 . 1 0 ]
-[v _U1CON0bits U1CON0bits `VES1192  1 e 1 @683 ]
-[s S1133 . 1 `uc 1 SENDB 1 0 :1:0 
+[u S1395 . 1 `S1373 1 . 1 0 `S1378 1 . 1 0 `S1384 1 . 1 0 `S1389 1 . 1 0 ]
+[v _U1CON0bits U1CON0bits `VES1395  1 e 1 @683 ]
+[s S1336 . 1 `uc 1 SENDB 1 0 :1:0 
 `uc 1 BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 RXBIMD 1 0 :1:3 
@@ -414,7 +433,7 @@ CONV_DONE 4
 `uc 1 ON 1 0 :1:7 
 ]
 "32630
-[s S1141 . 1 `uc 1 U1SENDB 1 0 :1:0 
+[s S1344 . 1 `uc 1 U1SENDB 1 0 :1:0 
 `uc 1 U1BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 U1RXBIMD 1 0 :1:3 
@@ -422,12 +441,11 @@ CONV_DONE 4
 `uc 1 . 1 0 :2:5 
 `uc 1 U1ON 1 0 :1:7 
 ]
-[u S1149 . 1 `S1133 1 . 1 0 `S1141 1 . 1 0 ]
-[v _U1CON1bits U1CON1bits `VES1149  1 e 1 @684 ]
-"32827
+[u S1352 . 1 `S1336 1 . 1 0 `S1344 1 . 1 0 ]
+[v _U1CON1bits U1CON1bits `VES1352  1 e 1 @684 ]
 "32827
 [v _U1BRG U1BRG `VEus  1 e 2 @686 ]
-[s S1220 . 1 `uc 1 RXBF 1 0 :1:0 
+[s S1423 . 1 `uc 1 RXBF 1 0 :1:0 
 `uc 1 RXBE 1 0 :1:1 
 `uc 1 XON 1 0 :1:2 
 `uc 1 RXIDL 1 0 :1:3 
@@ -437,7 +455,7 @@ CONV_DONE 4
 `uc 1 TXWRE 1 0 :1:7 
 ]
 "32909
-[s S1229 . 1 `uc 1 U1RXBF 1 0 :1:0 
+[s S1432 . 1 `uc 1 U1RXBF 1 0 :1:0 
 `uc 1 U1RXBE 1 0 :1:1 
 `uc 1 U1XON 1 0 :1:2 
 `uc 1 U1RXIDL 1 0 :1:3 
@@ -447,43 +465,43 @@ CONV_DONE 4
 `uc 1 U1TXWRE 1 0 :1:7 
 ]
 "32909
-[s S1238 . 1 `uc 1 . 1 0 :3:0 
+[s S1441 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 U1RCIDL 1 0 :1:3 
 ]
 "32909
-[s S1241 . 1 `uc 1 . 1 0 :3:0 
+[s S1444 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 RCIDL 1 0 :1:3 
 ]
 "32909
-[u S1244 . 1 `S1220 1 . 1 0 `S1229 1 . 1 0 `S1238 1 . 1 0 `S1241 1 . 1 0 ]
+[u S1447 . 1 `S1423 1 . 1 0 `S1432 1 . 1 0 `S1441 1 . 1 0 `S1444 1 . 1 0 ]
 "32909
 "32909
-[v _U1FIFObits U1FIFObits `VES1244  1 e 1 @688 ]
+[v _U1FIFObits U1FIFObits `VES1447  1 e 1 @688 ]
 "33284
 [v _U2RXB U2RXB `VEuc  1 e 1 @692 ]
 "33342
 [v _U2TXB U2TXB `VEuc  1 e 1 @694 ]
 "33574
-[s S1402 . 1 `uc 1 U2MODE 1 0 :4:0 
+[s S1605 . 1 `uc 1 U2MODE 1 0 :4:0 
 `uc 1 U2RXEN 1 0 :1:4 
 `uc 1 U2TXEN 1 0 :1:5 
 `uc 1 U2ABDEN 1 0 :1:6 
 `uc 1 U2BRGS 1 0 :1:7 
 ]
 "33574
-[s S1408 . 1 `uc 1 U2MODE0 1 0 :1:0 
+[s S1611 . 1 `uc 1 U2MODE0 1 0 :1:0 
 `uc 1 U2MODE1 1 0 :1:1 
 `uc 1 U2MODE2 1 0 :1:2 
 `uc 1 U2MODE3 1 0 :1:3 
 ]
 "33574
 "33574
-[u S1419 . 1 `S1170 1 . 1 0 `S1402 1 . 1 0 `S1408 1 . 1 0 `S1186 1 . 1 0 ]
+[u S1622 . 1 `S1373 1 . 1 0 `S1605 1 . 1 0 `S1611 1 . 1 0 `S1389 1 . 1 0 ]
 "33574
 "33574
-[v _U2CON0bits U2CON0bits `VES1419  1 e 1 @702 ]
+[v _U2CON0bits U2CON0bits `VES1622  1 e 1 @702 ]
 "33694
-[s S1368 . 1 `uc 1 U2SENDB 1 0 :1:0 
+[s S1571 . 1 `uc 1 U2SENDB 1 0 :1:0 
 `uc 1 U2BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 U2RXBIMD 1 0 :1:3 
@@ -492,14 +510,14 @@ CONV_DONE 4
 `uc 1 U2ON 1 0 :1:7 
 ]
 "33694
-[u S1376 . 1 `S1133 1 . 1 0 `S1368 1 . 1 0 ]
+[u S1579 . 1 `S1336 1 . 1 0 `S1571 1 . 1 0 ]
 "33694
 "33694
-[v _U2CON1bits U2CON1bits `VES1376  1 e 1 @703 ]
+[v _U2CON1bits U2CON1bits `VES1579  1 e 1 @703 ]
 "33891
 [v _U2BRG U2BRG `VEus  1 e 2 @705 ]
 "33973
-[s S1477 . 1 `uc 1 U2RXBF 1 0 :1:0 
+[s S1680 . 1 `uc 1 U2RXBF 1 0 :1:0 
 `uc 1 U2RXBE 1 0 :1:1 
 `uc 1 U2XON 1 0 :1:2 
 `uc 1 U2RXIDL 1 0 :1:3 
@@ -509,16 +527,16 @@ CONV_DONE 4
 `uc 1 U2TXWRE 1 0 :1:7 
 ]
 "33973
-[s S1486 . 1 `uc 1 . 1 0 :3:0 
+[s S1689 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 U2RCIDL 1 0 :1:3 
 ]
 "33973
 "33973
-[u S1492 . 1 `S1220 1 . 1 0 `S1477 1 . 1 0 `S1486 1 . 1 0 `S1241 1 . 1 0 ]
+[u S1695 . 1 `S1423 1 . 1 0 `S1680 1 . 1 0 `S1689 1 . 1 0 `S1444 1 . 1 0 ]
 "33973
 "33973
-[v _U2FIFObits U2FIFObits `VES1492  1 e 1 @707 ]
-[s S1523 . 1 `uc 1 TXCIF 1 0 :1:0 
+[v _U2FIFObits U2FIFObits `VES1695  1 e 1 @707 ]
+[s S1726 . 1 `uc 1 TXCIF 1 0 :1:0 
 `uc 1 RXFOIF 1 0 :1:1 
 `uc 1 RXBKIF 1 0 :1:2 
 `uc 1 FERIF 1 0 :1:3 
@@ -528,7 +546,7 @@ CONV_DONE 4
 `uc 1 TXMTIF 1 0 :1:7 
 ]
 "34151
-[s S1532 . 1 `uc 1 U2TXCIF 1 0 :1:0 
+[s S1735 . 1 `uc 1 U2TXCIF 1 0 :1:0 
 `uc 1 U2RXFOIF 1 0 :1:1 
 `uc 1 U2RXBKIF 1 0 :1:2 
 `uc 1 U2FERIF 1 0 :1:3 
@@ -538,38 +556,38 @@ CONV_DONE 4
 `uc 1 U2TXMTIF 1 0 :1:7 
 ]
 "34151
-[u S1541 . 1 `S1523 1 . 1 0 `S1532 1 . 1 0 ]
+[u S1744 . 1 `S1726 1 . 1 0 `S1735 1 . 1 0 ]
 "34151
 "34151
-[v _U2ERRIRbits U2ERRIRbits `VES1541  1 e 1 @709 ]
+[v _U2ERRIRbits U2ERRIRbits `VES1744  1 e 1 @709 ]
 "34348
 [v _U3RXB U3RXB `VEuc  1 e 1 @711 ]
 "34386
 [v _U3TXB U3TXB `VEuc  1 e 1 @713 ]
-[s S1712 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S1919 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 ]
 "34536
-[s S1716 . 1 `uc 1 U3MODE 1 0 :4:0 
+[s S1923 . 1 `uc 1 U3MODE 1 0 :4:0 
 `uc 1 U3RXEN 1 0 :1:4 
 `uc 1 U3TXEN 1 0 :1:5 
 `uc 1 U3ABDEN 1 0 :1:6 
 `uc 1 U3BRGS 1 0 :1:7 
 ]
 "34536
-[s S1722 . 1 `uc 1 U3MODE0 1 0 :1:0 
+[s S1929 . 1 `uc 1 U3MODE0 1 0 :1:0 
 `uc 1 U3MODE1 1 0 :1:1 
 `uc 1 U3MODE2 1 0 :1:2 
 ]
 "34536
 "34536
-[u S1732 . 1 `S1712 1 . 1 0 `S1716 1 . 1 0 `S1722 1 . 1 0 `S1186 1 . 1 0 ]
+[u S1939 . 1 `S1919 1 . 1 0 `S1923 1 . 1 0 `S1929 1 . 1 0 `S1389 1 . 1 0 ]
 "34536
 "34536
-[v _U3CON0bits U3CON0bits `VES1732  1 e 1 @721 ]
+[v _U3CON0bits U3CON0bits `VES1939  1 e 1 @721 ]
 "34646
-[s S1683 . 1 `uc 1 U3SENDB 1 0 :1:0 
+[s S1890 . 1 `uc 1 U3SENDB 1 0 :1:0 
 `uc 1 U3BRKOVR 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 U3RXBIMD 1 0 :1:3 
@@ -578,14 +596,14 @@ CONV_DONE 4
 `uc 1 U3ON 1 0 :1:7 
 ]
 "34646
-[u S1691 . 1 `S1133 1 . 1 0 `S1683 1 . 1 0 ]
+[u S1898 . 1 `S1336 1 . 1 0 `S1890 1 . 1 0 ]
 "34646
 "34646
-[v _U3CON1bits U3CON1bits `VES1691  1 e 1 @722 ]
+[v _U3CON1bits U3CON1bits `VES1898  1 e 1 @722 ]
 "34833
 [v _U3BRG U3BRG `VEus  1 e 2 @724 ]
 "34915
-[s S1829 . 1 `uc 1 U3RXBF 1 0 :1:0 
+[s S2036 . 1 `uc 1 U3RXBF 1 0 :1:0 
 `uc 1 U3RXBE 1 0 :1:1 
 `uc 1 U3XON 1 0 :1:2 
 `uc 1 U3RXIDL 1 0 :1:3 
@@ -595,17 +613,17 @@ CONV_DONE 4
 `uc 1 U3TXWRE 1 0 :1:7 
 ]
 "34915
-[s S1838 . 1 `uc 1 . 1 0 :3:0 
+[s S2045 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 U3RCIDL 1 0 :1:3 
 ]
 "34915
 "34915
-[u S1844 . 1 `S1220 1 . 1 0 `S1829 1 . 1 0 `S1838 1 . 1 0 `S1241 1 . 1 0 ]
+[u S2051 . 1 `S1423 1 . 1 0 `S2036 1 . 1 0 `S2045 1 . 1 0 `S1444 1 . 1 0 ]
 "34915
 "34915
-[v _U3FIFObits U3FIFObits `VES1844  1 e 1 @726 ]
+[v _U3FIFObits U3FIFObits `VES2051  1 e 1 @726 ]
 "35093
-[s S1788 . 1 `uc 1 U3TXCIF 1 0 :1:0 
+[s S1995 . 1 `uc 1 U3TXCIF 1 0 :1:0 
 `uc 1 U3RXFOIF 1 0 :1:1 
 `uc 1 U3RXBKIF 1 0 :1:2 
 `uc 1 U3FERIF 1 0 :1:3 
@@ -615,51 +633,51 @@ CONV_DONE 4
 `uc 1 U3TXMTIF 1 0 :1:7 
 ]
 "35093
-[u S1797 . 1 `S1523 1 . 1 0 `S1788 1 . 1 0 ]
+[u S2004 . 1 `S1726 1 . 1 0 `S1995 1 . 1 0 ]
 "35093
 "35093
-[v _U3ERRIRbits U3ERRIRbits `VES1797  1 e 1 @728 ]
+[v _U3ERRIRbits U3ERRIRbits `VES2004  1 e 1 @728 ]
 "39295
 [v _TMR0L TMR0L `VEuc  1 e 1 @792 ]
 "39433
 [v _TMR0H TMR0H `VEuc  1 e 1 @793 ]
-[s S886 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S1089 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 MD16 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
 "39721
-[s S892 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S1095 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T0MD16 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
 "39721
-[s S898 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S1101 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
 `uc 1 T016BIT 1 0 :1:4 
 ]
 "39721
-[s S904 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S1107 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
 "39721
-[u S909 . 1 `S886 1 . 1 0 `S892 1 . 1 0 `S898 1 . 1 0 `S904 1 . 1 0 ]
+[u S1112 . 1 `S1089 1 . 1 0 `S1095 1 . 1 0 `S1101 1 . 1 0 `S1107 1 . 1 0 ]
 "39721
 "39721
-[v _T0CON0bits T0CON0bits `VES909  1 e 1 @794 ]
-[s S938 . 1 `uc 1 CKPS 1 0 :4:0 
+[v _T0CON0bits T0CON0bits `VES1112  1 e 1 @794 ]
+[s S1141 . 1 `uc 1 CKPS 1 0 :4:0 
 `uc 1 ASYNC 1 0 :1:4 
 `uc 1 CS 1 0 :3:5 
 ]
 "39848
-[s S942 . 1 `uc 1 CKPS0 1 0 :1:0 
+[s S1145 . 1 `uc 1 CKPS0 1 0 :1:0 
 `uc 1 CKPS1 1 0 :1:1 
 `uc 1 CKPS2 1 0 :1:2 
 `uc 1 CKPS3 1 0 :1:3 
@@ -669,12 +687,12 @@ CONV_DONE 4
 `uc 1 CS2 1 0 :1:7 
 ]
 "39848
-[s S951 . 1 `uc 1 T0CKPS 1 0 :4:0 
+[s S1154 . 1 `uc 1 T0CKPS 1 0 :4:0 
 `uc 1 . 1 0 :1:4 
 `uc 1 T0CS 1 0 :3:5 
 ]
 "39848
-[s S955 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+[s S1158 . 1 `uc 1 T0CKPS0 1 0 :1:0 
 `uc 1 T0CKPS1 1 0 :1:1 
 `uc 1 T0CKPS2 1 0 :1:2 
 `uc 1 T0CKPS3 1 0 :1:3 
@@ -684,11 +702,11 @@ CONV_DONE 4
 `uc 1 T0CS2 1 0 :1:7 
 ]
 "39848
-[u S964 . 1 `S938 1 . 1 0 `S942 1 . 1 0 `S951 1 . 1 0 `S955 1 . 1 0 ]
+[u S1167 . 1 `S1141 1 . 1 0 `S1145 1 . 1 0 `S1154 1 . 1 0 `S1158 1 . 1 0 ]
 "39848
 "39848
-[v _T0CON1bits T0CON1bits `VES964  1 e 1 @795 ]
-[s S1652 . 1 `uc 1 ANSELA0 1 0 :1:0 
+[v _T0CON1bits T0CON1bits `VES1167  1 e 1 @795 ]
+[s S1859 . 1 `uc 1 ANSELA0 1 0 :1:0 
 `uc 1 ANSELA1 1 0 :1:1 
 `uc 1 ANSELA2 1 0 :1:2 
 `uc 1 ANSELA3 1 0 :1:3 
@@ -698,11 +716,11 @@ CONV_DONE 4
 `uc 1 ANSELA7 1 0 :1:7 
 ]
 "60104
-[u S1661 . 1 `S1652 1 . 1 0 ]
+[u S1868 . 1 `S1859 1 . 1 0 ]
 "60104
 "60104
-[v _ANSELAbits ANSELAbits `VES1661  1 e 1 @1024 ]
-[s S137 . 1 `uc 1 ANSELC0 1 0 :1:0 
+[v _ANSELAbits ANSELAbits `VES1868  1 e 1 @1024 ]
+[s S152 . 1 `uc 1 ANSELC0 1 0 :1:0 
 `uc 1 ANSELC1 1 0 :1:1 
 `uc 1 ANSELC2 1 0 :1:2 
 `uc 1 ANSELC3 1 0 :1:3 
@@ -712,11 +730,11 @@ CONV_DONE 4
 `uc 1 ANSELC7 1 0 :1:7 
 ]
 "61096
-[u S146 . 1 `S137 1 . 1 0 ]
+[u S161 . 1 `S152 1 . 1 0 ]
 "61096
 "61096
-[v _ANSELCbits ANSELCbits `VES146  1 e 1 @1040 ]
-[s S1337 . 1 `uc 1 ANSELD0 1 0 :1:0 
+[v _ANSELCbits ANSELCbits `VES161  1 e 1 @1040 ]
+[s S1540 . 1 `uc 1 ANSELD0 1 0 :1:0 
 `uc 1 ANSELD1 1 0 :1:1 
 `uc 1 ANSELD2 1 0 :1:2 
 `uc 1 ANSELD3 1 0 :1:3 
@@ -726,11 +744,11 @@ CONV_DONE 4
 `uc 1 ANSELD7 1 0 :1:7 
 ]
 "61592
-[u S1346 . 1 `S1337 1 . 1 0 ]
+[u S1549 . 1 `S1540 1 . 1 0 ]
 "61592
 "61592
-[v _ANSELDbits ANSELDbits `VES1346  1 e 1 @1048 ]
-[s S1110 . 1 `uc 1 ANSELF0 1 0 :1:0 
+[v _ANSELDbits ANSELDbits `VES1549  1 e 1 @1048 ]
+[s S1313 . 1 `uc 1 ANSELF0 1 0 :1:0 
 `uc 1 ANSELF1 1 0 :1:1 
 `uc 1 ANSELF2 1 0 :1:2 
 `uc 1 ANSELF3 1 0 :1:3 
@@ -740,11 +758,11 @@ CONV_DONE 4
 `uc 1 ANSELF7 1 0 :1:7 
 ]
 "62137
-[u S1119 . 1 `S1110 1 . 1 0 ]
+[u S1322 . 1 `S1313 1 . 1 0 ]
 "62137
 "62137
-[v _ANSELFbits ANSELFbits `VES1119  1 e 1 @1064 ]
-[s S1019 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
+[v _ANSELFbits ANSELFbits `VES1322  1 e 1 @1064 ]
+[s S1222 . 1 `uc 1 SPI1RXIE 1 0 :1:0 
 `uc 1 SPI1TXIE 1 0 :1:1 
 `uc 1 SPI1IE 1 0 :1:2 
 `uc 1 TMR2IE 1 0 :1:3 
@@ -754,11 +772,11 @@ CONV_DONE 4
 `uc 1 TMR0IE 1 0 :1:7 
 ]
 "67858
-[u S1028 . 1 `S1019 1 . 1 0 ]
+[u S1231 . 1 `S1222 1 . 1 0 ]
 "67858
 "67858
-[v _PIE3bits PIE3bits `VES1028  1 e 1 @1185 ]
-[s S1447 . 1 `uc 1 U2RXIE 1 0 :1:0 
+[v _PIE3bits PIE3bits `VES1231  1 e 1 @1185 ]
+[s S1650 . 1 `uc 1 U2RXIE 1 0 :1:0 
 `uc 1 U2TXIE 1 0 :1:1 
 `uc 1 U2EIE 1 0 :1:2 
 `uc 1 U2IE 1 0 :1:3 
@@ -768,11 +786,11 @@ CONV_DONE 4
 `uc 1 SCANIE 1 0 :1:7 
 ]
 "68163
-[u S1456 . 1 `S1447 1 . 1 0 ]
+[u S1659 . 1 `S1650 1 . 1 0 ]
 "68163
 "68163
-[v _PIE8bits PIE8bits `VES1456  1 e 1 @1190 ]
-[s S1758 . 1 `uc 1 U3RXIE 1 0 :1:0 
+[v _PIE8bits PIE8bits `VES1659  1 e 1 @1190 ]
+[s S1965 . 1 `uc 1 U3RXIE 1 0 :1:0 
 `uc 1 U3TXIE 1 0 :1:1 
 `uc 1 U3EIE 1 0 :1:2 
 `uc 1 U3IE 1 0 :1:3 
@@ -782,11 +800,11 @@ CONV_DONE 4
 `uc 1 PWM4IE 1 0 :1:7 
 ]
 "68225
-[u S1767 . 1 `S1758 1 . 1 0 ]
+[u S1974 . 1 `S1965 1 . 1 0 ]
 "68225
 "68225
-[v _PIE9bits PIE9bits `VES1767  1 e 1 @1191 ]
-[s S998 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
+[v _PIE9bits PIE9bits `VES1974  1 e 1 @1191 ]
+[s S1201 . 1 `uc 1 SPI1RXIF 1 0 :1:0 
 `uc 1 SPI1TXIF 1 0 :1:1 
 `uc 1 SPI1IF 1 0 :1:2 
 `uc 1 TMR2IF 1 0 :1:3 
@@ -796,11 +814,11 @@ CONV_DONE 4
 `uc 1 TMR0IF 1 0 :1:7 
 ]
 "68843
-[u S1007 . 1 `S998 1 . 1 0 ]
+[u S1210 . 1 `S1201 1 . 1 0 ]
 "68843
 "68843
-[v _PIR3bits PIR3bits `VES1007  1 e 1 @1201 ]
-[s S158 . 1 `uc 1 LATC0 1 0 :1:0 
+[v _PIR3bits PIR3bits `VES1210  1 e 1 @1201 ]
+[s S173 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -810,11 +828,11 @@ CONV_DONE 4
 `uc 1 LATC7 1 0 :1:7 
 ]
 "69758
-[u S167 . 1 `S158 1 . 1 0 ]
+[u S182 . 1 `S173 1 . 1 0 ]
 "69758
 "69758
-[v _LATCbits LATCbits `VES167  1 e 1 @1216 ]
-[s S1631 . 1 `uc 1 TRISA0 1 0 :1:0 
+[v _LATCbits LATCbits `VES182  1 e 1 @1216 ]
+[s S1838 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -824,11 +842,11 @@ CONV_DONE 4
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "69976
-[u S1640 . 1 `S1631 1 . 1 0 ]
+[u S1847 . 1 `S1838 1 . 1 0 ]
 "69976
 "69976
-[v _TRISAbits TRISAbits `VES1640  1 e 1 @1222 ]
-[s S179 . 1 `uc 1 TRISC0 1 0 :1:0 
+[v _TRISAbits TRISAbits `VES1847  1 e 1 @1222 ]
+[s S194 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -838,11 +856,11 @@ CONV_DONE 4
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "70100
-[u S188 . 1 `S179 1 . 1 0 ]
+[u S203 . 1 `S194 1 . 1 0 ]
 "70100
 "70100
-[v _TRISCbits TRISCbits `VES188  1 e 1 @1224 ]
-[s S1316 . 1 `uc 1 TRISD0 1 0 :1:0 
+[v _TRISCbits TRISCbits `VES203  1 e 1 @1224 ]
+[s S1519 . 1 `uc 1 TRISD0 1 0 :1:0 
 `uc 1 TRISD1 1 0 :1:1 
 `uc 1 TRISD2 1 0 :1:2 
 `uc 1 TRISD3 1 0 :1:3 
@@ -852,11 +870,11 @@ CONV_DONE 4
 `uc 1 TRISD7 1 0 :1:7 
 ]
 "70162
-[u S1325 . 1 `S1316 1 . 1 0 ]
+[u S1528 . 1 `S1519 1 . 1 0 ]
 "70162
 "70162
-[v _TRISDbits TRISDbits `VES1325  1 e 1 @1225 ]
-[s S1089 . 1 `uc 1 TRISF0 1 0 :1:0 
+[v _TRISDbits TRISDbits `VES1528  1 e 1 @1225 ]
+[s S1292 . 1 `uc 1 TRISF0 1 0 :1:0 
 `uc 1 TRISF1 1 0 :1:1 
 `uc 1 TRISF2 1 0 :1:2 
 `uc 1 TRISF3 1 0 :1:3 
@@ -866,11 +884,11 @@ CONV_DONE 4
 `uc 1 TRISF7 1 0 :1:7 
 ]
 "70256
-[u S1098 . 1 `S1089 1 . 1 0 ]
+[u S1301 . 1 `S1292 1 . 1 0 ]
 "70256
 "70256
-[v _TRISFbits TRISFbits `VES1098  1 e 1 @1227 ]
-[s S741 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[v _TRISFbits TRISFbits `VES1301  1 e 1 @1227 ]
+[s S834 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -879,91 +897,117 @@ CONV_DONE 4
 `uc 1 GIE 1 0 :1:7 
 ]
 "70669
-[s S749 . 1 `uc 1 . 1 0 :7:0 
+[s S842 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "70669
-[u S752 . 1 `S741 1 . 1 0 `S749 1 . 1 0 ]
+[u S845 . 1 `S834 1 . 1 0 `S842 1 . 1 0 ]
 "70669
 "70669
-[v _INTCON0bits INTCON0bits `VES752  1 e 1 @1238 ]
-"51 /Users/james/motorsports/projects/farseer/bg95.c
+[v _INTCON0bits INTCON0bits `VES845  1 e 1 @1238 ]
+"58 /Users/james/motorsports/projects/farseer/bg95.c
 [v _at_buf at_buf `[200]uc  1 s 200 at_buf ]
-"52
+"59
 [v _at_len at_len `us  1 s 2 at_len ]
-"53
+"60
 [v _at_expect at_expect `*.32Cuc  1 s 2 at_expect ]
-"54
+"61
 [v _at_err at_err `*.32Cuc  1 s 2 at_err ]
-"55
-[v _at_start at_start `ul  1 s 4 at_start ]
-"56
-[v _at_timeout at_timeout `ul  1 s 4 at_timeout ]
-"57
-[v _at_state at_state `E24090  1 s 1 at_state ]
-"58
-[v _at_done_ok at_done_ok `a  1 s 1 at_done_ok ]
 "62
-[v _pending_recv pending_recv `VEa  1 s 1 pending_recv ]
+[v _at_retry at_retry `*.32Cuc  1 s 2 at_retry ]
 "63
-[v _link_drop link_drop `E24103  1 s 1 link_drop ]
-"67
+[v _at_start at_start `ul  1 s 4 at_start ]
+"64
+[v _at_timeout at_timeout `ul  1 s 4 at_timeout ]
+"65
+[v _at_state at_state `E24105  1 s 1 at_state ]
+"66
+[v _at_done_result at_done_result `E24098  1 s 1 at_done_result ]
+"70
+[v _pending_recv pending_recv `VEa  1 s 1 pending_recv ]
+"71
+[v _link_drop link_drop `E24119  1 s 1 link_drop ]
+"75
 [v _line line `[96]uc  1 s 96 line ]
-"68
+"76
 [v _line_len line_len `uc  1 s 1 line_len ]
-[s S80 . 81 `uc 1 len 1 0 `[80]uc 1 data 80 1 ]
-"186
-[v _pending pending `S80  1 s 81 pending ]
-"187
-[v _pending_valid pending_valid `a  1 s 1 pending_valid ]
-"188
-[v _inflight inflight `S80  1 s 81 inflight ]
-[s S83 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
-"194
-[v _signal_snapshot signal_snapshot `S83  1 s 9 signal_snapshot ]
-"195
+"220
+[v _tx_buf tx_buf `[512]uc  1 s 512 tx_buf ]
+"221
+[v _tx_len tx_len `us  1 s 2 tx_len ]
+"222
+[v _tx_ready tx_ready `a  1 s 1 tx_ready ]
+[s S81 . 14 `us 1 sent 2 0 `us 1 send_fail 2 2 `us 1 timeouts 2 4 `us 1 rt_last_ms 2 6 `us 1 rt_min_ms 2 8 `us 1 rt_max_ms 2 10 `us 1 rt_avg_ms 2 12 ]
+"226
+[v _tx_stats tx_stats `S81  1 s 14 tx_stats ]
+"227
+[v _tx_rt_total_ms tx_rt_total_ms `ul  1 s 4 tx_rt_total_ms ]
+"228
+[v _send_start_ms send_start_ms `ul  1 s 4 send_start_ms ]
+"229
+[v _consec_send_fail consec_send_fail `uc  1 s 1 consec_send_fail ]
+"236
+[v _imei imei `[16]uc  1 s 16 imei ]
+"237
+[v _imei_valid imei_valid `a  1 s 1 imei_valid ]
+[s S96 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
+"269
+[v _signal_snapshot signal_snapshot `S96  1 s 9 signal_snapshot ]
+"270
 [v _last_qcsq_ms last_qcsq_ms `ul  1 s 4 last_qcsq_ms ]
-"196
+"271
 [v _last_qird_ms last_qird_ms `ul  1 s 4 last_qird_ms ]
-"242
-[v _downlink_cb downlink_cb `*.38(v  1 s 3 downlink_cb ]
-"314
-[v _state state `E24156  1 s 1 state ]
-"315
-[v _ready_sub ready_sub `E24176  1 s 1 ready_sub ]
-"316
-[v _cmd_active cmd_active `a  1 s 1 cmd_active ]
 "317
+[v _downlink_cb downlink_cb `*.38(v  1 s 3 downlink_cb ]
+"391
+[v _state state `E24180  1 s 1 state ]
+"392
+[v _ready_sub ready_sub `E24202  1 s 1 ready_sub ]
+"393
+[v _cmd_active cmd_active `a  1 s 1 cmd_active ]
+"394
 [v _backoff_until backoff_until `ul  1 s 4 backoff_until ]
-"318
-[v _backoff_next backoff_next `E24156  1 s 1 backoff_next ]
-"319
-[v _send_repeats send_repeats `uc  1 s 1 send_repeats ]
-"320
+"395
+[v _backoff_next backoff_next `E24180  1 s 1 backoff_next ]
+"396
 [v _cmd_buf cmd_buf `[96]uc  1 s 96 cmd_buf ]
-"321
+"397
 [v _pwr_hold_start pwr_hold_start `ul  1 s 4 pwr_hold_start ]
-"322
+"398
 [v _rail_up_ms rail_up_ms `ul  1 s 4 rail_up_ms ]
-"323
+"399
 [v _tx_enabled tx_enabled `a  1 s 1 tx_enabled ]
-"27 /Users/james/motorsports/projects/farseer/gps.c
-[v _line@gps$F446 line `[120]uc  1 s 120 line ]
-"28
-[v _line_len@gps$F447 line_len `uc  1 s 1 line_len ]
-"31
-[v _last_time last_time `[9]uc  1 s 9 last_time ]
-[s S415 . 17 `a 1 valid 1 0 `l 1 lat_1e7 4 1 `l 1 lng_1e7 4 5 `d 1 speed_mph 4 9 `d 1 course_deg 4 13 ]
-"34
-[v _last_fix last_fix `S415  1 s 17 last_fix ]
-"40
+"34 /Users/james/motorsports/projects/farseer/gps.c
+[v _line@gps$F513 line `[120]uc  1 s 120 line ]
+"35
+[v _line_len@gps$F514 line_len `uc  1 s 1 line_len ]
+[s S486 . 19 `a 1 valid 1 0 `us 1 seq 2 1 `ul 1 time_cs 4 3 `l 1 lat_1e7 4 7 `l 1 lng_1e7 4 11 `us 1 speed_kn_x100 2 15 `us 1 course_x10 2 17 ]
+"38
+[v _last_fix last_fix `S486  1 s 19 last_fix ]
+"44
 [v _cfg_acked cfg_acked `a  1 s 1 cfg_acked ]
-"41
+"45
 [v _cfg_sent cfg_sent `a  1 s 1 cfg_sent ]
-"47
+"51
 [v _rx_bytes rx_bytes `ul  1 s 4 rx_bytes ]
-"48
+"52
 [v _valid_sentences valid_sentences `ul  1 s 4 valid_sentences ]
+"21 /Users/james/motorsports/projects/farseer/telemetry.c
+[v _ring ring `[32][18]uc  1 s 576 ring ]
+"22
+[v _head head `uc  1 s 1 head ]
+"23
+[v _depth depth `uc  1 s 1 depth ]
+"24
+[v _newest_seq newest_seq `us  1 s 2 newest_seq ]
+"25
+[v _drops drops `us  1 s 2 drops ]
+"26
+[v _had_lock had_lock `a  1 s 1 had_lock ]
+"30
+[v _last_sent_seq last_sent_seq `us  1 s 2 last_sent_seq ]
+"32
+[v _last_status_ms last_status_ms `ul  1 s 4 last_status_ms ]
 "21 /Users/james/motorsports/projects/farseer/timer.c
 [v _g_millis g_millis `VEul  1 s 4 g_millis ]
 "28 /Users/james/motorsports/projects/farseer/uart2.c
@@ -972,77 +1016,70 @@ CONV_DONE 4
 [v _rx_head rx_head `VEuc  1 s 1 rx_head ]
 "30
 [v _rx_tail rx_tail `VEuc  1 s 1 rx_tail ]
+"37
+[v _rx_dropped rx_dropped `VEus  1 s 2 rx_dropped ]
 "29 /Users/james/motorsports/projects/farseer/uart3.c
-[v _rx_buf@uart3$F1875 rx_buf `VE[256]uc  1 s 256 rx_buf ]
+[v _rx_buf@uart3$F2082 rx_buf `VE[256]uc  1 s 256 rx_buf ]
 "30
-[v _rx_head@uart3$F1876 rx_head `VEuc  1 s 1 rx_head ]
+[v _rx_head@uart3$F2083 rx_head `VEuc  1 s 1 rx_head ]
 "31
-[v _rx_tail@uart3$F1877 rx_tail `VEuc  1 s 1 rx_tail ]
-"90 /Users/james/motorsports/projects/farseer/main.c
+[v _rx_tail@uart3$F2084 rx_tail `VEuc  1 s 1 rx_tail ]
+"111 /Users/james/motorsports/projects/farseer/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"163
-[v main@payload payload `[80]uc  1 a 80 0 ]
-"159
-[v main@lng_str lng_str `[14]uc  1 a 14 94 ]
-[v main@lat_str lat_str `[14]uc  1 a 14 80 ]
-[s S83 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
-"157
-[v main@sig sig `S83  1 a 9 124 ]
-"164
-[v main@n n `i  1 a 2 142 ]
-[s S415 . 17 `a 1 valid 1 0 `l 1 lat_1e7 4 1 `l 1 lng_1e7 4 5 `d 1 speed_mph 4 9 `d 1 course_deg 4 13 ]
-"154
-[v main@fix fix `S415  1 a 17 144 ]
-"153
-[v main@ts ts `*.39Cuc  1 a 2 122 ]
+"189
+[v main@n n `us  1 a 2 16 ]
+[s S81 . 14 `us 1 sent 2 0 `us 1 send_fail 2 2 `us 1 timeouts 2 4 `us 1 rt_last_ms 2 6 `us 1 rt_min_ms 2 8 `us 1 rt_max_ms 2 10 `us 1 rt_avg_ms 2 12 ]
+"219
+[v main@tx tx `S81  1 a 14 49 ]
+"212
+[v main@gps_sentences gps_sentences `ul  1 a 4 22 ]
+[v main@gps_bytes gps_bytes `ul  1 a 4 18 ]
+"185
+[v main@max_len max_len `us  1 a 2 26 ]
+"186
+[v main@buf buf `*.39uc  1 a 2 14 ]
+[s S486 . 19 `a 1 valid 1 0 `us 1 seq 2 1 `ul 1 time_cs 4 3 `l 1 lat_1e7 4 7 `l 1 lng_1e7 4 11 `us 1 speed_kn_x100 2 15 `us 1 course_x10 2 17 ]
+"160
+[v main@fix fix `S486  1 a 19 30 ]
+"140
+[v main@c c `uc  1 a 1 29 ]
+"134
+[v main@last_health last_health `ul  1 a 4 8 ]
+"133
+[v main@last_send last_send `ul  1 a 4 4 ]
+"125
+[v main@last_gps_cfg last_gps_cfg `ul  1 a 4 0 ]
+"135
+[v main@last_fix_seq last_fix_seq `us  1 a 2 12 ]
 "136
-[v main@gps_sentences gps_sentences `ul  1 a 4 137 ]
-[v main@gps_bytes gps_bytes `ul  1 a 4 133 ]
-"115
-[v main@c c `uc  1 a 1 141 ]
-"111
-[v main@last_gps_health last_gps_health `ul  1 a 4 116 ]
-"110
-[v main@last_send last_send `ul  1 a 4 112 ]
-"104
-[v main@last_gps_cfg last_gps_cfg `ul  1 a 4 108 ]
-"158
-[v main@seq seq `us  1 s 2 seq ]
-"181
-} 0
-"13 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_snprintf.c
-[v _snprintf snprintf `(i  1 e 2 0 ]
-{
-[u S2575 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
-"17
-[s S2578 _IO_FILE 11 `S2575 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v snprintf@f f `S2578  1 a 11 86 ]
-"16
-[v snprintf@ap ap `[1]*.39v  1 a 2 84 ]
-"15
-[v snprintf@cnt cnt `i  1 a 2 82 ]
-"13
-[v snprintf@s s `*.39uc  1 p 2 56 ]
-[v snprintf@n n `ui  1 p 2 58 ]
-[v snprintf@fmt fmt `*.32Cuc  1 p 2 60 ]
-"39
+[v main@link_was_ready link_was_ready `a  1 a 1 28 ]
+"233
 } 0
 "33 /Users/james/motorsports/projects/farseer/uart3.c
 [v _UART3_Init UART3_Init `(v  1 e 1 0 ]
 {
 "64
 } 0
-"71 /Users/james/motorsports/projects/farseer/uart2.c
+"79 /Users/james/motorsports/projects/farseer/uart2.c
 [v _UART2_TryReadByte UART2_TryReadByte `(a  1 e 1 0 ]
 {
 [v UART2_TryReadByte@out out `*.39uc  1 p 2 4 ]
-"81
+"89
 } 0
-"32
+"91
+[v _UART2_RxDropped UART2_RxDropped `(us  1 e 2 0 ]
+{
+"98
+[v UART2_RxDropped@v v `us  1 a 2 6 ]
+"96
+[v UART2_RxDropped@was_enabled was_enabled `a  1 a 1 8 ]
+"101
+} 0
+"39
 [v _UART2_Init UART2_Init `(v  1 e 1 0 ]
 {
-"61
+"69
 } 0
 "17 /Users/james/motorsports/projects/farseer/uart1.c
 [v _UART1_Init UART1_Init `(v  1 e 1 0 ]
@@ -1054,51 +1091,172 @@ CONV_DONE 4
 {
 "41
 } 0
-"92 /Users/james/motorsports/projects/farseer/gps.c
+"207 /Users/james/motorsports/projects/farseer/telemetry.c
+[v _Telemetry_RingDepth Telemetry_RingDepth `(uc  1 e 1 0 ]
+{
+"210
+} 0
+"100
+[v _Telemetry_PushFix Telemetry_PushFix `(v  1 e 1 0 ]
+{
+"106
+[v Telemetry_PushFix@rec rec `*.39uc  1 a 2 12 ]
+[s S486 . 19 `a 1 valid 1 0 `us 1 seq 2 1 `ul 1 time_cs 4 3 `l 1 lat_1e7 4 7 `l 1 lng_1e7 4 11 `us 1 speed_kn_x100 2 15 `us 1 course_x10 2 17 ]
+"100
+[v Telemetry_PushFix@fix fix `*.39CS486  1 p 2 10 ]
+"125
+} 0
+"45
+[v _put_u32 put_u32 `(v  1 s 1 put_u32 ]
+{
+[v put_u32@p p `*.39uc  1 p 2 4 ]
+[v put_u32@v v `ul  1 p 4 6 ]
+"51
+} 0
+"93
+[v _Telemetry_LinkReady Telemetry_LinkReady `(v  1 e 1 0 ]
+{
+"98
+} 0
+"82
+[v _Telemetry_Init Telemetry_Init `(v  1 e 1 0 ]
+{
+"91
+} 0
+"212
+[v _Telemetry_DropCount Telemetry_DropCount `(us  1 e 2 0 ]
+{
+"215
+} 0
+"127
+[v _Telemetry_BuildPacket Telemetry_BuildPacket `(us  1 e 2 0 ]
+{
+"193
+[v Telemetry_BuildPacket@i i `us  1 a 2 45 ]
+"174
+[v Telemetry_BuildPacket@n n `us  1 a 2 56 ]
+"169
+[v Telemetry_BuildPacket@start_off start_off `us  1 a 2 54 ]
+"179
+[v Telemetry_BuildPacket@fit fit `us  1 a 2 51 ]
+"162
+[v Telemetry_BuildPacket@oldest_seq oldest_seq `us  1 a 2 49 ]
+"135
+[v Telemetry_BuildPacket@delta delta `us  1 a 2 47 ]
+"192
+[v Telemetry_BuildPacket@p p `*.39uc  1 a 2 43 ]
+"163
+[v Telemetry_BuildPacket@want_start want_start `us  1 a 2 38 ]
+"191
+[v Telemetry_BuildPacket@idx idx `uc  1 a 1 53 ]
+"136
+[v Telemetry_BuildPacket@n_new n_new `uc  1 a 1 40 ]
+"127
+[v Telemetry_BuildPacket@out out `*.39uc  1 p 2 30 ]
+[v Telemetry_BuildPacket@max_len max_len `us  1 p 2 32 ]
+"205
+} 0
+"58
+[v _write_header write_header `(v  1 s 1 write_header ]
+{
+[s S96 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
+"60
+[v write_header@sig sig `S96  1 a 9 20 ]
+"61
+[v write_header@imei imei `*.39Cuc  1 a 2 18 ]
+"63
+[v write_header@flags flags `uc  1 a 1 29 ]
+"58
+[v write_header@out out `*.39uc  1 p 2 15 ]
+[v write_header@n_fixes n_fixes `uc  1 p 1 17 ]
+"78
+} 0
+"39
+[v _put_u16 put_u16 `(v  1 s 1 put_u16 ]
+{
+[v put_u16@p p `*.39uc  1 p 2 4 ]
+[v put_u16@v v `us  1 p 2 6 ]
+"43
+} 0
+"156 /Users/james/motorsports/projects/farseer/gps.c
+[v _GPS_ConfigAcked GPS_ConfigAcked `(a  1 e 1 0 ]
+{
+"159
+} 0
+"751 /Users/james/motorsports/projects/farseer/bg95.c
+[v _BG95_ImeiValid BG95_ImeiValid `(a  1 e 1 0 ]
+{
+"754
+} 0
+"83 /Users/james/motorsports/projects/farseer/bg95.h
+[s S96 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
+"734 /Users/james/motorsports/projects/farseer/bg95.c
+[v _BG95_GetSignal BG95_GetSignal `(S96  1 e 9 0 ]
+{
+"737
+} 0
+"746
+[v _BG95_GetImei BG95_GetImei `(*.39Cuc  1 e 3 0 ]
+{
+"749
+} 0
+"7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 9 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 8 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+"30
+} 0
+"161 /Users/james/motorsports/projects/farseer/gps.c
 [v _GPS_RxStats GPS_RxStats `(v  1 e 1 0 ]
 {
 [v GPS_RxStats@bytes bytes `*.39ul  1 p 2 4 ]
 [v GPS_RxStats@sentences sentences `*.39ul  1 p 2 6 ]
-"100
+"169
 } 0
-"520
+"597
 [v _GPS_Process GPS_Process `(v  1 e 1 0 ]
 {
 [v GPS_Process@c c `uc  1 p 1 wreg ]
 [v GPS_Process@c c `uc  1 p 1 wreg ]
-"522
+"599
 [v GPS_Process@c c `uc  1 p 1 86 ]
-"539
+"616
 } 1
-"479
+"556
 [v _ubx_rx ubx_rx `(v  1 s 1 ubx_rx ]
 {
 [v ubx_rx@b b `uc  1 p 1 wreg ]
 [v ubx_rx@b b `uc  1 p 1 wreg ]
-"481
+"558
 [v ubx_rx@st st `uc  1 s 1 st ]
-"482
+"559
 [v ubx_rx@cls cls `uc  1 s 1 cls ]
 [v ubx_rx@id id `uc  1 s 1 id ]
 [v ubx_rx@cka cka `uc  1 s 1 cka ]
 [v ubx_rx@ckb ckb `uc  1 s 1 ckb ]
-"483
+"560
 [v ubx_rx@len len `us  1 s 2 len ]
 [v ubx_rx@idx idx `us  1 s 2 idx ]
-"479
-[v ubx_rx@b b `uc  1 p 1 82 ]
-"518
+"556
+[v ubx_rx@b b `uc  1 p 1 85 ]
+"595
 } 1
-"382
+"459
 [v _parse_line parse_line `(v  1 s 1 parse_line ]
 {
-"400
+"477
 [v parse_line@fields fields `[24]*.39uc  1 a 48 0 ]
-"394
+"471
 [v parse_line@type type `[4]uc  1 a 4 48 ]
-"401
+"478
 [v parse_line@n n `uc  1 a 1 52 ]
-"409
+"486
 } 0
 "3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strcmp.c
 [v _strcmp strcmp `(i  1 e 2 0 ]
@@ -1107,406 +1265,367 @@ CONV_DONE 4
 [v strcmp@r r `*.32Cuc  1 p 2 6 ]
 "7
 } 0
-"143 /Users/james/motorsports/projects/farseer/gps.c
+"212 /Users/james/motorsports/projects/farseer/gps.c
 [v _split_fields split_fields `(uc  1 s 1 split_fields ]
 {
-"149
+"218
 [v split_fields@delim delim `uc  1 a 1 13 ]
-"145
+"214
 [v split_fields@n n `uc  1 a 1 14 ]
-"143
+"212
 [v split_fields@s s `*.39uc  1 p 2 4 ]
 [v split_fields@fields fields `*.39*.39uc  1 p 2 6 ]
 [v split_fields@max_fields max_fields `uc  1 p 1 8 ]
-"159
+"228
 } 0
-"288
+"360
 [v _parse_rmc parse_rmc `(v  1 s 1 parse_rmc ]
 {
-"332
-[v parse_rmc@lng_str lng_str `[14]uc  1 a 14 113 ]
-[v parse_rmc@lat_str lat_str `[14]uc  1 a 14 99 ]
-"318
-[v parse_rmc@mph mph `d  1 a 4 145 ]
-"317
-[v parse_rmc@knots knots `d  1 a 4 141 ]
-"295
-[v parse_rmc@status status `*.39Cuc  1 a 2 153 ]
-"294
-[v parse_rmc@time time `*.39Cuc  1 a 2 151 ]
-"301
-[v parse_rmc@course course `*.39Cuc  1 a 2 149 ]
-"302
-[v parse_rmc@date date `*.39Cuc  1 a 2 137 ]
-"300
-[v parse_rmc@speed speed `*.39Cuc  1 a 2 135 ]
-"299
-[v parse_rmc@ew ew `*.39Cuc  1 a 2 133 ]
-"298
-[v parse_rmc@lon lon `*.39Cuc  1 a 2 131 ]
-"297
-[v parse_rmc@ns ns `*.39Cuc  1 a 2 129 ]
-"296
-[v parse_rmc@lat lat `*.39Cuc  1 a 2 127 ]
-"288
-[v parse_rmc@fields fields `*.39*.39uc  1 p 2 96 ]
-[v parse_rmc@n n `uc  1 p 1 98 ]
-"304
+"403
+[v parse_rmc@lng_str lng_str `[14]uc  1 a 14 64 ]
+[v parse_rmc@lat_str lat_str `[14]uc  1 a 14 50 ]
+"367
+[v parse_rmc@status status `*.39Cuc  1 a 2 96 ]
+"366
+[v parse_rmc@time time `*.39Cuc  1 a 2 94 ]
+"374
+[v parse_rmc@date date `*.39Cuc  1 a 2 90 ]
+"373
+[v parse_rmc@course course `*.39Cuc  1 a 2 88 ]
+"372
+[v parse_rmc@speed speed `*.39Cuc  1 a 2 86 ]
+"371
+[v parse_rmc@ew ew `*.39Cuc  1 a 2 84 ]
+"370
+[v parse_rmc@lon lon `*.39Cuc  1 a 2 82 ]
+"369
+[v parse_rmc@ns ns `*.39Cuc  1 a 2 80 ]
+"368
+[v parse_rmc@lat lat `*.39Cuc  1 a 2 78 ]
+"360
+[v parse_rmc@fields fields `*.39*.39uc  1 p 2 47 ]
+[v parse_rmc@n n `uc  1 p 1 49 ]
+"376
 [v parse_rmc@last_log last_log `ul  1 s 4 last_log ]
-"343
+"414
 } 0
-"269
+"99
+[v _time_to_cs time_to_cs `(ul  1 s 4 time_to_cs ]
+{
+"101
+[v time_to_cs@i i `uc  1 a 1 57 ]
+"112
+[v time_to_cs@cs cs `ul  1 a 4 53 ]
+"109
+[v time_to_cs@ss ss `ul  1 a 4 49 ]
+"108
+[v time_to_cs@mm mm `ul  1 a 4 45 ]
+"107
+[v time_to_cs@hh hh `ul  1 a 4 41 ]
+"99
+[v time_to_cs@t t `*.39Cuc  1 p 2 25 ]
+"122
+} 0
+"341
 [v _tick_nav_rate tick_nav_rate `(v  1 s 1 tick_nav_rate ]
 {
-"276
-[v tick_nav_rate@now now `ul  1 a 4 78 ]
-"271
+"348
+[v tick_nav_rate@now now `ul  1 a 4 81 ]
+"343
 [v tick_nav_rate@window_start window_start `ul  1 s 4 window_start ]
-"272
+"344
 [v tick_nav_rate@count count `us  1 s 2 count ]
-"286
+"358
 } 0
-"257
+"131
+[v _print_x100 print_x100 `(v  1 s 1 print_x100 ]
+{
+[v print_x100@v v `ul  1 p 4 77 ]
+"134
+} 0
+"329
 [v _print_date print_date `(v  1 s 1 print_date ]
 {
-[v print_date@d d `*.39Cuc  1 p 2 70 ]
-"264
+[v print_date@d d `*.39Cuc  1 p 2 77 ]
+"336
 } 0
-"345
+"416
 [v _parse_gga parse_gga `(v  1 s 1 parse_gga ]
 {
-"369
-[v parse_gga@lng_str lng_str `[14]uc  1 a 14 113 ]
-[v parse_gga@lat_str lat_str `[14]uc  1 a 14 99 ]
-"355
-[v parse_gga@qual qual `*.39Cuc  1 a 2 145 ]
-"356
-[v parse_gga@sats sats `*.39Cuc  1 a 2 143 ]
-"350
-[v parse_gga@time time `*.39Cuc  1 a 2 141 ]
-"358
-[v parse_gga@alt alt `*.39Cuc  1 a 2 137 ]
-"357
-[v parse_gga@hdop hdop `*.39Cuc  1 a 2 135 ]
-"354
-[v parse_gga@ew ew `*.39Cuc  1 a 2 133 ]
-"353
-[v parse_gga@lon lon `*.39Cuc  1 a 2 131 ]
-"352
-[v parse_gga@ns ns `*.39Cuc  1 a 2 129 ]
-"351
-[v parse_gga@lat lat `*.39Cuc  1 a 2 127 ]
-"345
-[v parse_gga@fields fields `*.39*.39uc  1 p 2 96 ]
-[v parse_gga@n n `uc  1 p 1 98 ]
-"364
+"439
+[v parse_gga@lng_str lng_str `[14]uc  1 a 14 64 ]
+[v parse_gga@lat_str lat_str `[14]uc  1 a 14 50 ]
+"443
+[v parse_gga@alt_x10 alt_x10 `l  1 a 4 98 ]
+"427
+[v parse_gga@sats sats `*.39Cuc  1 a 2 96 ]
+"429
+[v parse_gga@alt alt `*.39Cuc  1 a 2 92 ]
+"428
+[v parse_gga@hdop hdop `*.39Cuc  1 a 2 90 ]
+"426
+[v parse_gga@qual qual `*.39Cuc  1 a 2 88 ]
+"425
+[v parse_gga@ew ew `*.39Cuc  1 a 2 86 ]
+"424
+[v parse_gga@lon lon `*.39Cuc  1 a 2 84 ]
+"423
+[v parse_gga@ns ns `*.39Cuc  1 a 2 82 ]
+"422
+[v parse_gga@lat lat `*.39Cuc  1 a 2 80 ]
+"421
+[v parse_gga@time time `*.39Cuc  1 a 2 78 ]
+"416
+[v parse_gga@fields fields `*.39*.39uc  1 p 2 47 ]
+[v parse_gga@n n `uc  1 p 1 49 ]
+"434
 [v parse_gga@last_log last_log `ul  1 s 4 last_log ]
-"380
+"457
 } 0
-"168
+"237
 [v _to_deg_1e7 to_deg_1e7 `(l  1 s 4 to_deg_1e7 ]
 {
-"184
+"253
 [v to_deg_1e7@frac frac `ul  1 a 4 63 ]
-"172
+"241
 [v to_deg_1e7@ipart ipart `ul  1 a 4 59 ]
-"206
+"275
 [v to_deg_1e7@deg_1e7 deg_1e7 `l  1 a 4 54 ]
-"200
+"269
 [v to_deg_1e7@minutes5 minutes5 `ul  1 a 4 50 ]
-"199
+"268
 [v to_deg_1e7@degrees degrees `ul  1 a 4 46 ]
-"173
+"242
 [v to_deg_1e7@i i `uc  1 a 1 67 ]
-"185
+"254
 [v to_deg_1e7@got got `uc  1 a 1 58 ]
-"168
+"237
 [v to_deg_1e7@coord coord `*.39Cuc  1 p 2 38 ]
 [v to_deg_1e7@hemi hemi `*.39Cuc  1 p 2 40 ]
-"212
+"281
 } 0
-"100 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strtof.c
-[v _strtof strtof `(f  1 e 4 0 ]
+"125
+[v _print_x10 print_x10 `(v  1 s 1 print_x10 ]
 {
-[u S2919 . 4 `f 1 _l 4 0 `ul 1 _v 4 0 ]
-"120
-[v strtof@_u _u `S2919  1 a 4 61 ]
-"114
-[v strtof@eexp eexp `i  1 a 2 59 ]
-"113
-[v strtof@expon expon `i  1 a 2 57 ]
-"115
-[v strtof@err err `i  1 a 2 53 ]
-"102
-[v strtof@i i `uc  1 a 1 65 ]
-[v strtof@flags flags `uc  1 a 1 56 ]
-"112
-[v strtof@digit digit `uc  1 a 1 55 ]
-"116
-[v strtof@dpos dpos `uc  1 a 1 52 ]
-[v strtof@xpos xpos `uc  1 a 1 51 ]
-"100
-[v strtof@s s `*.39Cuc  1 p 2 41 ]
-[v strtof@res res `*.39*.39uc  1 p 2 43 ]
-"450
+[v print_x10@v v `ul  1 p 4 77 ]
+"128
 } 0
-"8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/toupper.c
-[v _toupper toupper `(i  1 e 2 0 ]
-{
-[v toupper@c c `i  1 p 2 4 ]
-"12
-} 0
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nanf.c
-[v _nanf nanf `(f  1 e 4 0 ]
-{
-[u S2780 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v nanf@u u `S2780  1 a 4 8 ]
-"4
-[v nanf@s s `*.32Cuc  1 p 2 4 ]
-"9
-} 0
-"8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/isxdigit.c
-[v _isxdigit isxdigit `(i  1 e 2 0 ]
-{
-[v isxdigit@c c `i  1 p 2 4 ]
-"11
-} 0
-"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/isdigit.c
-[v _isdigit isdigit `(i  1 e 2 0 ]
-{
-[v isdigit@c c `i  1 p 2 4 ]
-"8
-} 0
-"10 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 14 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 13 ]
-"10
-[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 4 ]
-"15
-[v ___xxtofl@sign sign `uc  1 p 1 12 ]
-"44
-} 1
-"15 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 8 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 4 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 6 ]
-"53
-} 0
-"53 /Users/james/motorsports/projects/farseer/gps.c
-[v _store_time store_time `(v  1 s 1 store_time ]
-{
-[v store_time@t t `*.39Cuc  1 p 2 72 ]
-"60
-} 0
-"247
+"319
 [v _print_time print_time `(v  1 s 1 print_time ]
 {
-[v print_time@t t `*.39Cuc  1 p 2 70 ]
-"254
+[v print_time@t t `*.39Cuc  1 p 2 77 ]
+"326
 } 0
-"65
+"84
+[v _parse_fixed_signed parse_fixed_signed `(l  1 s 4 parse_fixed_signed ]
+{
+"90
+[v parse_fixed_signed@v v `l  1 a 4 45 ]
+"86
+[v parse_fixed_signed@neg neg `a  1 a 1 49 ]
+"84
+[v parse_fixed_signed@s s `*.39Cuc  1 p 2 37 ]
+[v parse_fixed_signed@decimals decimals `uc  1 p 1 39 ]
+"92
+} 0
+"58
+[v _parse_fixed parse_fixed `(ul  1 s 4 parse_fixed ]
+{
+"60
+[v parse_fixed@v v `ul  1 a 4 32 ]
+"61
+[v parse_fixed@i i `uc  1 a 1 36 ]
+"58
+[v parse_fixed@s s `*.39Cuc  1 p 2 25 ]
+[v parse_fixed@decimals decimals `uc  1 p 1 27 ]
+"80
+} 0
+"139
 [v _log_due log_due `(a  1 s 1 log_due ]
 {
-"67
+"141
 [v log_due@now now `ul  1 a 4 27 ]
-"65
+"139
 [v log_due@last last `*.39ul  1 p 2 13 ]
-"73
+"147
 } 0
-"234
+"286
+[v _format_deg format_deg `(v  1 s 1 format_deg ]
+{
+"288
+[v format_deg@v v `ul  1 a 4 43 ]
+"289
+[v format_deg@sign sign `*.32Cuc  1 a 2 41 ]
+"286
+[v format_deg@out out `*.39uc  1 p 2 27 ]
+[v format_deg@deg_1e7 deg_1e7 `l  1 p 4 29 ]
+"304
+} 0
+"306
 [v _fix_quality_str fix_quality_str `(*.32Cuc  1 s 3 fix_quality_str ]
 {
 [v fix_quality_str@q q `*.39Cuc  1 p 2 4 ]
-"244
+"316
 } 0
-"214
-[v _GPS_FormatDeg GPS_FormatDeg `(v  1 e 1 0 ]
-{
-"216
-[v GPS_FormatDeg@v v `ul  1 a 4 92 ]
-"217
-[v GPS_FormatDeg@sign sign `*.32Cuc  1 a 2 90 ]
-"214
-[v GPS_FormatDeg@out out `*.39uc  1 p 2 72 ]
-[v GPS_FormatDeg@deg_1e7 deg_1e7 `l  1 p 4 74 ]
-"232
-} 0
-"115
+"184
 [v _checksum_ok checksum_ok `(uc  1 s 1 checksum_ok ]
 {
-"122
+"191
 [v checksum_ok@i i `uc  1 a 1 12 ]
-"132
+"201
 [v checksum_ok@lo lo `c  1 a 1 11 ]
-"131
+"200
 [v checksum_ok@hi hi `c  1 a 1 10 ]
-"121
+"190
 [v checksum_ok@sum sum `uc  1 a 1 9 ]
-"115
+"184
 [v checksum_ok@s s `*.39Cuc  1 p 2 5 ]
-"137
+"206
 } 0
-"103
+"172
 [v _hex_val hex_val `(c  1 s 1 hex_val ]
 {
 [v hex_val@c c `uc  1 p 1 wreg ]
 [v hex_val@c c `uc  1 p 1 wreg ]
-"105
+"174
 [v hex_val@c c `uc  1 p 1 4 ]
-"109
+"178
 } 1
-"75
-[v _GPS_LastTime GPS_LastTime `(*.39Cuc  1 e 3 0 ]
-{
-"78
-} 0
-"80
+"149
 [v _GPS_GetFix GPS_GetFix `(v  1 e 1 0 ]
 {
-[s S415 . 17 `a 1 valid 1 0 `l 1 lat_1e7 4 1 `l 1 lng_1e7 4 5 `d 1 speed_mph 4 9 `d 1 course_deg 4 13 ]
-[v GPS_GetFix@out out `*.39S415  1 p 2 4 ]
-"85
+[s S486 . 19 `a 1 valid 1 0 `us 1 seq 2 1 `ul 1 time_cs 4 3 `l 1 lat_1e7 4 7 `l 1 lng_1e7 4 11 `us 1 speed_kn_x100 2 15 `us 1 course_x10 2 17 ]
+[v GPS_GetFix@out out `*.39S486  1 p 2 4 ]
+"154
 } 0
-"439
+"516
 [v _GPS_Configure GPS_Configure `(v  1 e 1 0 ]
 {
-"459
+"536
 [v GPS_Configure@cfg cfg `C[51]uc  1 s 51 cfg ]
-"473
+"550
 } 0
-"413
+"490
 [v _ubx_send ubx_send `(v  1 s 1 ubx_send ]
 {
 [v ubx_send@cls cls `uc  1 p 1 wreg ]
-"432
-[v ubx_send@i_620 i `us  1 a 2 21 ]
-"429
-[v ubx_send@i_619 i `uc  1 a 1 24 ]
-"424
-[v ubx_send@i_618 i `us  1 a 2 19 ]
-"420
+"509
+[v ubx_send@i_713 i `us  1 a 2 21 ]
+"506
+[v ubx_send@i_712 i `uc  1 a 1 24 ]
+"501
+[v ubx_send@i_711 i `us  1 a 2 19 ]
+"497
 [v ubx_send@i i `uc  1 a 1 23 ]
-"415
+"492
 [v ubx_send@hdr hdr `[6]uc  1 a 6 13 ]
-"417
+"494
 [v ubx_send@ck_a ck_a `uc  1 a 1 26 ]
 [v ubx_send@ck_b ck_b `uc  1 a 1 25 ]
-"413
+"490
 [v ubx_send@cls cls `uc  1 p 1 wreg ]
 [v ubx_send@id id `uc  1 p 1 5 ]
 [v ubx_send@payload payload `*.32Cuc  1 p 2 6 ]
 [v ubx_send@len len `us  1 p 2 8 ]
-"415
+"492
 [v ubx_send@cls cls `uc  1 p 1 12 ]
-"437
+"514
 } 1
-"63 /Users/james/motorsports/projects/farseer/uart2.c
+"71 /Users/james/motorsports/projects/farseer/uart2.c
 [v _UART2_Write UART2_Write `(v  1 e 1 0 ]
 {
 [v UART2_Write@data data `uc  1 p 1 wreg ]
 [v UART2_Write@data data `uc  1 p 1 wreg ]
 [v UART2_Write@data data `uc  1 p 1 4 ]
-"69
+"77
 } 1
-"87 /Users/james/motorsports/projects/farseer/gps.c
-[v _GPS_ConfigAcked GPS_ConfigAcked `(a  1 e 1 0 ]
-{
-"90
-} 0
-"76 /Users/james/motorsports/projects/farseer/main.c
+"97 /Users/james/motorsports/projects/farseer/main.c
 [v _Clock_Init Clock_Init `(v  1 s 1 Clock_Init ]
 {
-"88
+"109
 } 0
-"584 /Users/james/motorsports/projects/farseer/bg95.c
+"756 /Users/james/motorsports/projects/farseer/bg95.c
 [v _BG95_Task BG95_Task `(v  1 e 1 0 ]
 {
-"616
-[v BG95_Task@r r `E24084  1 a 1 91 ]
-"717
+"815
+[v BG95_Task@r_449 r `E24098  1 a 1 48 ]
+"788
+[v BG95_Task@r r `E24098  1 a 1 47 ]
+"931
 } 0
-"362
+"438
 [v _step_optional step_optional `(v  1 s 1 step_optional ]
 {
-"369
-[v step_optional@r r `E24084  1 a 1 74 ]
-"362
-[v step_optional@cmd cmd `*.32Cuc  1 p 2 70 ]
-[v step_optional@timeout_ms timeout_ms `ul  1 p 4 72 ]
-[v step_optional@on_next on_next `E24156  1 p 1 76 ]
-"378
+"445
+[v step_optional@r r `E24098  1 a 1 84 ]
+"438
+[v step_optional@cmd cmd `*.32Cuc  1 p 2 77 ]
+[v step_optional@timeout_ms timeout_ms `ul  1 p 4 79 ]
+[v step_optional@on_next on_next `E24180  1 p 1 83 ]
+"454
 } 0
-"338
+"414
 [v _step step `(v  1 s 1 step ]
 {
-[v step@cmd cmd `*.34Cuc  1 p 2 70 ]
-[v step@expect expect `*.32Cuc  1 p 2 72 ]
-[v step@err err `*.32Cuc  1 p 2 74 ]
-"339
-[v step@timeout_ms timeout_ms `ul  1 p 4 76 ]
-[v step@on_ok on_ok `E24156  1 p 1 80 ]
-[v step@on_fail on_fail `E24156  1 p 1 81 ]
-"358
+[v step@cmd cmd `*.34Cuc  1 p 2 22 ]
+[v step@expect expect `*.32Cuc  1 p 2 24 ]
+[v step@err err `*.32Cuc  1 p 2 26 ]
+"415
+[v step@timeout_ms timeout_ms `ul  1 p 4 28 ]
+[v step@on_ok on_ok `E24180  1 p 1 32 ]
+[v step@on_fail on_fail `E24180  1 p 1 33 ]
+"434
 } 0
-"425
+"555
 [v _ready_task ready_task `(v  1 s 1 ready_task ]
 {
-"453
-[v ready_task@i i `uc  1 a 1 86 ]
-"524
+"583
+[v ready_task@i i `us  1 a 2 39 ]
+"666
 } 0
-"389
+"522
 [v _ready_service ready_service `(v  1 s 1 ready_service ]
 {
-"423
+"553
 } 0
-"380
-[v _begin_head_send begin_head_send `(v  1 s 1 begin_head_send ]
+"456
+[v _begin_send begin_send `(v  1 s 1 begin_send ]
 {
-"385
+"462
 } 0
 "9 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S2575 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[u S2787 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
 "13
-[s S2578 _IO_FILE 11 `S2575 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S2578  1 a 11 74 ]
+[s S2790 _IO_FILE 11 `S2787 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S2790  1 a 11 16 ]
 "12
-[v sprintf@ap ap `[1]*.39v  1 a 2 72 ]
+[v sprintf@ap ap `[1]*.39v  1 a 2 14 ]
 "9
-[v sprintf@s s `*.39uc  1 p 2 56 ]
-[v sprintf@fmt fmt `*.32Cuc  1 p 2 58 ]
+[v sprintf@s s `*.39uc  1 p 2 0 ]
+[v sprintf@fmt fmt `*.32Cuc  1 p 2 2 ]
 "23
 } 0
-"84 /Users/james/motorsports/projects/farseer/bg95.c
+"99 /Users/james/motorsports/projects/farseer/bg95.c
 [v _at_submit at_submit `(v  1 s 1 at_submit ]
 {
-[v at_submit@cmd cmd `*.34Cuc  1 p 2 21 ]
-[v at_submit@expect expect `*.32Cuc  1 p 2 23 ]
-[v at_submit@err err `*.32Cuc  1 p 2 25 ]
-"85
-[v at_submit@timeout_ms timeout_ms `ul  1 p 4 27 ]
-"90
+[v at_submit@cmd cmd `*.34Cuc  1 p 2 23 ]
+[v at_submit@expect expect `*.32Cuc  1 p 2 25 ]
+[v at_submit@err err `*.32Cuc  1 p 2 27 ]
+"100
+[v at_submit@timeout_ms timeout_ms `ul  1 p 4 29 ]
+"105
 } 0
-"72
+"85
 [v _at_wait at_wait `(v  1 s 1 at_wait ]
 {
 [v at_wait@expect expect `*.32Cuc  1 p 2 13 ]
 [v at_wait@err err `*.32Cuc  1 p 2 15 ]
-[v at_wait@timeout_ms timeout_ms `ul  1 p 4 17 ]
-"81
+[v at_wait@retry retry `*.32Cuc  1 p 2 17 ]
+"86
+[v at_wait@timeout_ms timeout_ms `ul  1 p 4 19 ]
+"96
 } 0
 "109 /Users/james/motorsports/projects/farseer/uart3.c
 [v _UART3_WriteStr UART3_WriteStr `(v  1 e 1 0 ]
@@ -1522,49 +1641,49 @@ CONV_DONE 4
 [v UART3_Write@data data `uc  1 p 1 4 ]
 "107
 } 1
-"249 /Users/james/motorsports/projects/farseer/bg95.c
+"324 /Users/james/motorsports/projects/farseer/bg95.c
 [v _parse_qird parse_qird `(a  1 s 1 parse_qird ]
 {
-"257
-[v parse_qird@len len `l  1 a 4 80 ]
-"251
-[v parse_qird@p p `*.39Cuc  1 a 2 84 ]
-"262
-[v parse_qird@nl nl `*.39Cuc  1 a 2 78 ]
-"266
-[v parse_qird@data data `*.39Cuc  1 a 2 76 ]
-"249
-[v parse_qird@buf buf `*.39Cuc  1 p 2 74 ]
-"273
+"332
+[v parse_qird@len len `l  1 a 4 33 ]
+"326
+[v parse_qird@p p `*.39Cuc  1 a 2 37 ]
+"337
+[v parse_qird@nl nl `*.39Cuc  1 a 2 31 ]
+"341
+[v parse_qird@data data `*.39Cuc  1 a 2 29 ]
+"324
+[v parse_qird@buf buf `*.39Cuc  1 p 2 82 ]
+"348
 } 0
-"55 /Users/james/motorsports/projects/farseer/main.c
+"76 /Users/james/motorsports/projects/farseer/main.c
 [v _on_downlink on_downlink `(v  1 s 1 on_downlink ]
 {
-"63
-[v on_downlink@c c `uc  1 a 1 81 ]
-"62
-[v on_downlink@i_811 i `us  1 a 2 79 ]
-"58
-[v on_downlink@i i `us  1 a 2 77 ]
-"55
-[v on_downlink@data data `*.39Cuc  1 p 2 70 ]
-[v on_downlink@len len `us  1 p 2 72 ]
-"68
+"84
+[v on_downlink@c c `uc  1 a 1 28 ]
+"83
+[v on_downlink@i_932 i `us  1 a 2 26 ]
+"79
+[v on_downlink@i i `us  1 a 2 24 ]
+"76
+[v on_downlink@data data `*.39Cuc  1 p 2 77 ]
+[v on_downlink@len len `us  1 p 2 79 ]
+"89
 } 0
-"201 /Users/james/motorsports/projects/farseer/bg95.c
+"276 /Users/james/motorsports/projects/farseer/bg95.c
 [v _parse_qcsq parse_qcsq `(v  1 s 1 parse_qcsq ]
 {
-"219
-[v parse_qcsq@end end `*.39uc  1 a 2 80 ]
-"209
-[v parse_qcsq@vals vals `[4]s  1 a 8 72 ]
-"203
-[v parse_qcsq@p p `*.39Cuc  1 a 2 83 ]
-"210
-[v parse_qcsq@n n `uc  1 a 1 82 ]
-"201
-[v parse_qcsq@buf buf `*.39Cuc  1 p 2 70 ]
-"236
+"294
+[v parse_qcsq@end end `*.39uc  1 a 2 30 ]
+"284
+[v parse_qcsq@vals vals `[4]s  1 a 8 22 ]
+"278
+[v parse_qcsq@p p `*.39Cuc  1 a 2 33 ]
+"285
+[v parse_qcsq@n n `uc  1 a 1 32 ]
+"276
+[v parse_qcsq@buf buf `*.39Cuc  1 p 2 77 ]
+"311
 } 0
 "7 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/__strtoxl.c
 [v ___strtoxl __strtoxl `(ul  1 e 4 0 ]
@@ -1596,34 +1715,82 @@ CONV_DONE 4
 [v ___lmul@multiplicand multiplicand `ul  1 p 4 17 ]
 "129
 } 0
-"325 /Users/james/motorsports/projects/farseer/bg95.c
+"475 /Users/james/motorsports/projects/farseer/bg95.c
+[v _note_send_ok note_send_ok `(v  1 s 1 note_send_ok ]
+{
+"477
+[v note_send_ok@rt rt `ul  1 a 4 42 ]
+"501
+} 0
+"509
+[v _note_send_failed note_send_failed `(v  1 s 1 note_send_failed ]
+{
+"518
+} 0
+"401
 [v _enter_backoff enter_backoff `(v  1 s 1 enter_backoff ]
 {
-[v enter_backoff@next next `E24156  1 p 1 wreg ]
-[v enter_backoff@next next `E24156  1 p 1 wreg ]
-"327
-[v enter_backoff@next next `E24156  1 p 1 74 ]
-"333
+[v enter_backoff@next next `E24180  1 p 1 wreg ]
+[v enter_backoff@next next `E24180  1 p 1 wreg ]
+"403
+[v enter_backoff@next next `E24180  1 p 1 77 ]
+"409
 } 1
-"156
-[v _at_poll at_poll `(E24084  1 s 1 at_poll ]
+"469
+[v _end_send end_send `(v  1 s 1 end_send ]
 {
-"170
+"473
 } 0
-"116
+"195
+[v _at_poll at_poll `(E24098  1 s 1 at_poll ]
+{
+"209
+} 0
+"111
+[v _at_flush_rx at_flush_rx `(v  1 s 1 at_flush_rx ]
+{
+"113
+[v at_flush_rx@c c `uc  1 a 1 6 ]
+"118
+} 0
+"243
+[v _parse_gsn parse_gsn `(v  1 s 1 parse_gsn ]
+{
+"251
+[v parse_gsn@n n `uc  1 a 1 18 ]
+"243
+[v parse_gsn@s s `*.39Cuc  1 p 2 15 ]
+"263
+} 0
+"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 3 0 ]
+{
+"8
+[v memcpy@s s `*.39Cuc  1 a 2 13 ]
+"7
+[v memcpy@d d `*.39uc  1 a 2 11 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 10 ]
+"4
+[v memcpy@d1 d1 `*.39v  1 p 2 4 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 6 ]
+[v memcpy@n n `ui  1 p 2 8 ]
+"18
+} 0
+"144 /Users/james/motorsports/projects/farseer/bg95.c
 [v _bg95_pump bg95_pump `(v  1 s 1 bg95_pump ]
 {
-"118
-[v bg95_pump@c c `uc  1 a 1 79 ]
-"154
+"146
+[v bg95_pump@c c `uc  1 a 1 84 ]
+"193
 } 0
 "5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/memmove.c
 [v _memmove memmove `(*.39v  1 e 3 0 ]
 {
-[u S2558 . 3 `um 1 i 3 0 `*.39uc 1 p 2 0 `*.39Cuc 1 cp 2 0 ]
+[u S2765 . 3 `um 1 i 3 0 `*.39uc 1 p 2 0 `*.39Cuc 1 cp 2 0 ]
 "12
-[v memmove@d d `S2558  1 a 3 33 ]
-[v memmove@s s `S2558  1 a 3 30 ]
+[v memmove@d d `S2765  1 a 3 33 ]
+[v memmove@s s `S2765  1 a 3 30 ]
 "13
 [v memmove@c c `uc  1 a 1 29 ]
 "5
@@ -1632,14 +1799,14 @@ CONV_DONE 4
 [v memmove@n n `ui  1 p 2 8 ]
 "51
 } 0
-"92 /Users/james/motorsports/projects/farseer/bg95.c
+"120 /Users/james/motorsports/projects/farseer/bg95.c
 [v _bg95_handle_urc bg95_handle_urc `(v  1 s 1 bg95_handle_urc ]
 {
-"107
-[v bg95_handle_urc@comma comma `*.39Cuc  1 a 2 77 ]
-"92
-[v bg95_handle_urc@l l `*.39Cuc  1 p 2 70 ]
-"113
+"135
+[v bg95_handle_urc@comma comma `*.39Cuc  1 a 2 82 ]
+"120
+[v bg95_handle_urc@l l `*.39Cuc  1 p 2 77 ]
+"141
 } 0
 "4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strstr.c
 [v _strstr strstr `(*.39uc  1 e 3 0 ]
@@ -1659,6 +1826,15 @@ CONV_DONE 4
 [v strncmp@n n `ui  1 p 2 8 ]
 "8
 } 0
+"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.34Cuc  1 a 2 6 ]
+"5
+[v strlen@s s `*.34Cuc  1 p 2 4 ]
+"12
+} 0
 "3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strchr.c
 [v _strchr strchr `(*.39uc  1 e 3 0 ]
 {
@@ -1670,68 +1846,68 @@ CONV_DONE 4
 [v _printf printf `(i  1 e 2 0 ]
 {
 "8
-[v printf@ap ap `[1]*.39v  1 a 2 72 ]
+[v printf@ap ap `[1]*.39v  1 a 2 75 ]
 "5
-[v printf@fmt fmt `*.32Cuc  1 p 2 56 ]
+[v printf@fmt fmt `*.32Cuc  1 p 2 0 ]
 "13
 } 0
 "1817 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
 "1820
-[v vfprintf@cfmt cfmt `*.32uc  1 a 2 70 ]
-[s S2613 _IO_FILE 0 ]
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 73 ]
+[s S2822 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.39S2613  1 p 2 50 ]
-[v vfprintf@fmt fmt `*.32Cuc  1 p 2 52 ]
-[v vfprintf@ap ap `*.39*.39v  1 p 2 54 ]
+[v vfprintf@fp fp `*.39S2822  1 p 2 67 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 69 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 71 ]
 "1840
 } 0
 "1177
-[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
-[u S2663 . 4 `l 1 sint 4 0 `ul 1 uint 4 0 `d 1 f 4 0 ]
+[u S2846 . 4 `l 1 sint 4 0 `ul 1 uint 4 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S2663  1 a 4 63 ]
+[v vfpfcnvrt@convarg convarg `S2846  1 a 4 60 ]
 "1179
-[v vfpfcnvrt@cp cp `*.32uc  1 a 2 68 ]
-[v vfpfcnvrt@c c `uc  1 a 1 67 ]
+[v vfpfcnvrt@cp cp `*.32uc  1 a 2 65 ]
+[v vfpfcnvrt@c c `uc  1 a 1 64 ]
 "1180
-[v vfpfcnvrt@done done `a  1 a 1 62 ]
-[s S2613 _IO_FILE 0 ]
+[v vfpfcnvrt@done done `a  1 a 1 59 ]
+[s S2822 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.39S2613  1 p 2 44 ]
-[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 46 ]
-[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 48 ]
+[v vfpfcnvrt@fp fp `*.39S2822  1 p 2 49 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 51 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 53 ]
 "1814
 } 0
 "1055
-[v _xtoa xtoa `(i  1 s 2 xtoa ]
+[v _xtoa xtoa `(v  1 s 1 xtoa ]
 {
 "1063
-[v xtoa@i i `i  1 a 2 46 ]
-[v xtoa@w w `i  1 a 2 43 ]
-"1065
-[v xtoa@p p `i  1 a 2 41 ]
+[v xtoa@i i `i  1 a 2 45 ]
+[v xtoa@w w `i  1 a 2 42 ]
 "1059
-[v xtoa@c c `uc  1 a 1 45 ]
-[s S2613 _IO_FILE 0 ]
+[v xtoa@c c `uc  1 a 1 44 ]
+"1067
+[v xtoa@p p `a  1 a 1 41 ]
+[s S2822 _IO_FILE 0 ]
 "1055
-[v xtoa@fp fp `*.39S2613  1 p 2 31 ]
+[v xtoa@fp fp `*.39S2822  1 p 2 31 ]
 [v xtoa@d d `ul  1 p 4 33 ]
 "1153
 } 0
 "1001
-[v _utoa utoa `(i  1 s 2 utoa ]
+[v _utoa utoa `(v  1 s 1 utoa ]
 {
 "1003
-[v utoa@i i `i  1 a 2 48 ]
-[v utoa@w w `i  1 a 2 46 ]
-"1005
-[v utoa@p p `i  1 a 2 44 ]
-[s S2613 _IO_FILE 0 ]
+[v utoa@i i `i  1 a 2 47 ]
+[v utoa@w w `i  1 a 2 45 ]
+"1007
+[v utoa@p p `a  1 a 1 44 ]
+[s S2822 _IO_FILE 0 ]
 "1001
-[v utoa@fp fp `*.39S2613  1 p 2 38 ]
+[v utoa@fp fp `*.39S2822  1 p 2 38 ]
 [v utoa@d d `ul  1 p 4 40 ]
 "1047
 } 0
@@ -1758,7 +1934,7 @@ CONV_DONE 4
 "30
 } 0
 "942 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/doprnt.c
-[v _stoa stoa `(i  1 s 2 stoa ]
+[v _stoa stoa `(v  1 s 1 stoa ]
 {
 "945
 [v stoa@l l `i  1 a 2 27 ]
@@ -1768,9 +1944,9 @@ CONV_DONE 4
 [v stoa@w w `i  1 a 2 23 ]
 "945
 [v stoa@p p `i  1 a 2 21 ]
-[s S2613 _IO_FILE 0 ]
+[s S2822 _IO_FILE 0 ]
 "942
-[v stoa@fp fp `*.39S2613  1 p 2 15 ]
+[v stoa@fp fp `*.39S2822  1 p 2 15 ]
 [v stoa@s s `*.34uc  1 p 2 17 ]
 "997
 } 0
@@ -1786,220 +1962,33 @@ CONV_DONE 4
 [v read_prec_or_width@ap ap `*.39[1]*.39v  1 p 2 6 ]
 "1171
 } 0
-"587
-[v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
-{
-[u S2632 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
-"592
-[v efgtoa@u u `S2632  1 a 4 40 ]
-[v efgtoa@g g `S2632  1 a 4 34 ]
-"591
-[v efgtoa@l l `d  1 a 4 27 ]
-[v efgtoa@h h `d  1 a 4 23 ]
-"592
-[v efgtoa@ou ou `S2632  1 a 4 17 ]
-"590
-[v efgtoa@n n `i  1 a 2 38 ]
-[v efgtoa@i i `i  1 a 2 31 ]
-[v efgtoa@w w `i  1 a 2 21 ]
-[v efgtoa@e e `i  1 a 2 15 ]
-[v efgtoa@m m `i  1 a 2 13 ]
-[v efgtoa@d d `i  1 a 2 11 ]
-[v efgtoa@t t `i  1 a 2 4 ]
-[v efgtoa@p p `i  1 a 2 2 ]
-[v efgtoa@ne ne `i  1 a 2 0 ]
-"589
-[v efgtoa@sign sign `uc  1 a 1 33 ]
-[v efgtoa@nmode nmode `uc  1 a 1 10 ]
-[v efgtoa@mode mode `uc  1 a 1 9 ]
-[v efgtoa@pp pp `uc  1 a 1 8 ]
-[s S2613 _IO_FILE 0 ]
-"587
-[v efgtoa@fp fp `*.39S2613  1 p 2 49 ]
-[v efgtoa@f f `d  1 p 4 51 ]
-[v efgtoa@c c `uc  1 p 1 55 ]
-"868
-} 0
-"3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strcpy.c
-[v _strcpy strcpy `(*.39uc  1 e 3 0 ]
-{
-"5
-[v strcpy@d d `*.39uc  1 a 2 8 ]
-"3
-[v strcpy@dest dest `*.39uc  1 p 2 4 ]
-[v strcpy@src src `*.32Cuc  1 p 2 6 ]
-"8
-} 0
-"1 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/labs.c
-[v _labs labs `(l  1 e 4 0 ]
-{
-[v labs@a a `l  1 p 4 4 ]
-"4
-} 0
-"3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/floorf.c
-[v _floorf floorf `(f  1 e 4 0 ]
-{
-[u S2780 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"5
-[v floorf@u u `S2780  1 a 4 45 ]
-"7
-[v floorf@m m `ul  1 a 4 39 ]
-"6
-[v floorf@e e `i  1 a 2 43 ]
-"3
-[v floorf@x x `f  1 p 4 29 ]
-"4
-[v floorf@F521 F521 `S2780  1 s 4 F521 ]
-"27
-} 0
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/__fpclassifyf.c
-[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
-{
-[u S2780 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
-"6
-[v ___fpclassifyf@u u `S2780  1 a 4 14 ]
-"7
-[v ___fpclassifyf@e e `i  1 a 2 12 ]
-"4
-[v ___fpclassifyf@x x `f  1 p 4 4 ]
-"5
-[v ___fpclassifyf@F465 F465 `S2780  1 s 4 F465 ]
-"11
-} 0
-"43 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 13 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 12 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 4 ]
-"70
-} 0
-"245 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/sprcadd.c
-[v ___flsub __flsub `(d  1 e 4 0 ]
-{
-[v ___flsub@b b `d  1 p 4 29 ]
-[v ___flsub@a a `d  1 p 4 33 ]
-"250
-} 0
-"10
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 19 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 18 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 17 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 16 ]
-"10
-[v ___fladd@b b `d  1 p 4 4 ]
-[v ___fladd@a a `d  1 p 4 8 ]
-"237
-} 0
-"15 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
-{
-[v ___flneg@f1 f1 `d  1 p 4 4 ]
-"20
-} 0
-"8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S2397 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S2402 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S2405 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2397 1 fAsBytes 4 0 `S2402 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2405  1 a 4 23 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 18 ]
-[s S2473 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S2476 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2473 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2476  1 a 2 27 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 22 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 17 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 16 ]
-"8
-[v ___flmul@b b `d  1 p 4 4 ]
-[v ___flmul@a a `d  1 p 4 8 ]
-"205
-} 0
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-{
-[v ___flge@ff1 ff1 `d  1 p 4 29 ]
-[v ___flge@ff2 ff2 `d  1 p 4 33 ]
-"19
-} 0
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/fleq.c
-[v ___fleq __fleq `(b  1 e 0 0 ]
-{
-[v ___fleq@ff1 ff1 `d  1 p 4 4 ]
-[v ___fleq@ff2 ff2 `d  1 p 4 8 ]
-"12
-} 0
-"11 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 23 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 16 ]
-"20
-[v ___fldiv@new_exp new_exp `s  1 a 2 21 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 28 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 27 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 20 ]
-"11
-[v ___fldiv@b b `d  1 p 4 4 ]
-[v ___fldiv@a a `d  1 p 4 8 ]
-"185
-} 0
-"513 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/doprnt.c
-[v _dtoa dtoa `(i  1 s 2 dtoa ]
+"513
+[v _dtoa dtoa `(v  1 s 1 dtoa ]
 {
 "516
-[v dtoa@i i `i  1 a 2 44 ]
-[v dtoa@w w `i  1 a 2 41 ]
-"518
-[v dtoa@p p `i  1 a 2 39 ]
+[v dtoa@i i `i  1 a 2 43 ]
+[v dtoa@w w `i  1 a 2 40 ]
 "515
-[v dtoa@s s `uc  1 a 1 43 ]
-[s S2613 _IO_FILE 0 ]
+[v dtoa@s s `uc  1 a 1 42 ]
+"520
+[v dtoa@p p `a  1 a 1 39 ]
+[s S2822 _IO_FILE 0 ]
 "513
-[v dtoa@fp fp `*.39S2613  1 p 2 31 ]
+[v dtoa@fp fp `*.39S2822  1 p 2 31 ]
 [v dtoa@d d `l  1 p 4 33 ]
 "583
 } 0
 "193
-[v _pad pad `(i  1 s 2 pad ]
+[v _pad pad `(v  1 s 1 pad ]
 {
 "195
 [v pad@i i `i  1 a 2 29 ]
-[s S2613 _IO_FILE 0 ]
+[s S2822 _IO_FILE 0 ]
 "193
-[v pad@fp fp `*.39S2613  1 p 2 22 ]
+[v pad@fp fp `*.39S2822  1 p 2 22 ]
 [v pad@buf buf `*.39uc  1 p 2 24 ]
 [v pad@p p `i  1 p 2 26 ]
 "226
-} 0
-"5 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-"7
-[v strlen@a a `*.34Cuc  1 a 2 6 ]
-"5
-[v strlen@s s `*.34Cuc  1 p 2 4 ]
-"12
 } 0
 "8 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/nf_fputs.c
 [v _fputs fputs `(i  1 e 2 0 ]
@@ -2010,9 +1999,9 @@ CONV_DONE 4
 [v fputs@c c `uc  1 a 1 19 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 15 ]
-[u S2575 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
-[s S2578 _IO_FILE 11 `S2575 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.39S2578  1 p 2 17 ]
+[u S2787 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S2790 _IO_FILE 11 `S2787 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S2790  1 p 2 17 ]
 "19
 } 0
 "1 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/abs.c
@@ -2046,14 +2035,14 @@ CONV_DONE 4
 "41
 } 0
 "476 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/doprnt.c
-[v _ctoa ctoa `(i  1 s 2 ctoa ]
+[v _ctoa ctoa `(v  1 s 1 ctoa ]
 {
 "478
 [v ctoa@w w `i  1 a 2 21 ]
 [v ctoa@l l `i  1 a 2 19 ]
-[s S2613 _IO_FILE 0 ]
+[s S2822 _IO_FILE 0 ]
 "476
-[v ctoa@fp fp `*.39S2613  1 p 2 15 ]
+[v ctoa@fp fp `*.39S2822  1 p 2 15 ]
 [v ctoa@c c `uc  1 p 1 17 ]
 "509
 } 0
@@ -2061,9 +2050,9 @@ CONV_DONE 4
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 6 ]
-[u S2575 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
-[s S2578 _IO_FILE 11 `S2575 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.39S2578  1 p 2 8 ]
+[u S2787 . 2 `*.39uc 1 buffer 2 0 `*.39Cuc 1 source 2 0 ]
+[s S2790 _IO_FILE 11 `S2787 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2790  1 p 2 8 ]
 "24
 } 0
 "52 /Users/james/motorsports/projects/farseer/uart1.c
@@ -2094,33 +2083,16 @@ CONV_DONE 4
 {
 "69
 } 0
-"566 /Users/james/motorsports/projects/farseer/bg95.c
-[v _BG95_QueueDatagram BG95_QueueDatagram `(a  1 e 1 0 ]
+"707 /Users/james/motorsports/projects/farseer/bg95.c
+[v _BG95_IsReady BG95_IsReady `(a  1 e 1 0 ]
 {
-[v BG95_QueueDatagram@data data `*.39Cuc  1 p 2 15 ]
-[v BG95_QueueDatagram@len len `us  1 p 2 17 ]
-"577
+"710
 } 0
-"4 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/memcpy.c
-[v _memcpy memcpy `(*.39v  1 e 3 0 ]
-{
-"8
-[v memcpy@s s `*.39Cuc  1 a 2 13 ]
-"7
-[v memcpy@d d `*.39uc  1 a 2 11 ]
-"9
-[v memcpy@tmp tmp `uc  1 a 1 10 ]
-"4
-[v memcpy@d1 d1 `*.39v  1 p 2 4 ]
-[v memcpy@s1 s1 `*.39Cv  1 p 2 6 ]
-[v memcpy@n n `ui  1 p 2 8 ]
-"18
-} 0
-"530 /Users/james/motorsports/projects/farseer/bg95.c
+"672
 [v _BG95_Init BG95_Init `(v  1 e 1 0 ]
 {
 [v BG95_Init@on_downlink on_downlink `*.38(v  1 p 3 13 ]
-"559
+"705
 } 0
 "43 /Users/james/motorsports/projects/farseer/timer.c
 [v _millis millis `(ul  1 e 4 0 ]
@@ -2131,26 +2103,49 @@ CONV_DONE 4
 [v millis@gie gie `uc  1 a 1 12 ]
 "52
 } 0
-"62 /Users/james/motorsports/projects/farseer/bg95.h
-[s S83 . 9 `a 1 valid 1 0 `s 1 rssi 2 1 `s 1 rsrp 2 3 `s 1 sinr 2 5 `s 1 rsrq 2 7 ]
-"579 /Users/james/motorsports/projects/farseer/bg95.c
-[v _BG95_GetSignal BG95_GetSignal `(S83  1 e 9 0 ]
+"3 /Applications/microchip/xc8/v3.10/pic/sources/c99/common/memset.c
+[v _memset memset `(*.39v  1 e 3 0 ]
 {
-"582
+"5
+[v memset@p p `*.39uc  1 a 2 10 ]
+"3
+[v memset@dest dest `*.39v  1 p 2 4 ]
+[v memset@c c `i  1 p 2 6 ]
+[v memset@n n `ui  1 p 2 8 ]
+"10
+} 0
+"739 /Users/james/motorsports/projects/farseer/bg95.c
+[v _BG95_GetTxStats BG95_GetTxStats `(v  1 e 1 0 ]
+{
+[s S81 . 14 `us 1 sent 2 0 `us 1 send_fail 2 2 `us 1 timeouts 2 4 `us 1 rt_last_ms 2 6 `us 1 rt_min_ms 2 8 `us 1 rt_max_ms 2 10 `us 1 rt_avg_ms 2 12 ]
+[v BG95_GetTxStats@out out `*.39S81  1 p 2 4 ]
+"744
+} 0
+"725
+[v _BG95_CommitTxBuffer BG95_CommitTxBuffer `(v  1 e 1 0 ]
+{
+[v BG95_CommitTxBuffer@len len `us  1 p 2 4 ]
+"732
+} 0
+"712
+[v _BG95_ClaimTxBuffer BG95_ClaimTxBuffer `(*.39uc  1 e 3 0 ]
+{
+[v BG95_ClaimTxBuffer@max_len max_len `*.39us  1 p 2 4 ]
+"723
 } 0
 "54 /Users/james/motorsports/projects/farseer/timer.c
 [v _Timer0_ISR Timer0_ISR `IIH(v  1 e 1 0 ]
 {
 "58
 } 0
-"83 /Users/james/motorsports/projects/farseer/uart2.c
+"103 /Users/james/motorsports/projects/farseer/uart2.c
 [v _UART2_RX_ISR UART2_RX_ISR `IIH(v  1 e 1 0 ]
 {
-"94
+"114
 [v UART2_RX_ISR@next next `uc  1 a 1 1 ]
-"93
+"113
 [v UART2_RX_ISR@b b `uc  1 a 1 0 ]
-"99
+"121
 } 0
 "83 /Users/james/motorsports/projects/farseer/uart3.c
 [v _UART3_RX_ISR UART3_RX_ISR `IIH(v  1 e 1 0 ]

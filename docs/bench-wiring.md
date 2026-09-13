@@ -19,7 +19,7 @@ it no longer matches the custom-board cellular pin map in `uart3.c` and
 > **Do not run the current custom-board firmware on this harness unchanged.**
 > The harness uses RF4/RF5 and RA2 with the Sixfab HAT's active-HIGH
 > `HAT_PWR_OFF`; the product firmware uses RA1/RA0 and active-HIGH
-> `CELL_PWR_EN` on RE0.
+> `CELL_PWR_EN` on RC7.
 
 ## What you are testing
 

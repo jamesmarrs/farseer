@@ -35,7 +35,7 @@ diagram (Figure 1, §2.3, p. 11) shows `VCC_3V3` feeding a boost circuit and an
 52-pin map. The card boots when its rail comes up, so boot ordering is
 controlled by the **`3V3_CELL` buck's EN** (`CELL_PWR_EN` into `U3` on
 `3v3_cell.kicad_sch`), not by a module-side key pin. [bg95.c](../bg95.c)
-drives this from RE0 with the matching active-HIGH polarity (HIGH = rail on)
+drives this from RC7 with the matching active-HIGH polarity (HIGH = rail on)
 — the inverse of the legacy Sixfab `HAT_PWR_OFF` scheme in
 [bench-wiring.md](bench-wiring.md), which this firmware no longer targets.
 
@@ -146,8 +146,8 @@ Only **1.8 V (U)SIM cards are supported** (§3.3, p. 19). The card supplies
   power cycle — and the URC timestamps the event.
 - `C53` on `USIM_VDD` must stay ≤ 1 µF and close to the holder (§3.3); the
   33 pF caps (`C54`–`C56`) filter EGSM900 interference on RST/CLK/DATA;
-  `U9` (USBLC6-4SC6Y, ~3 pF/ch, SOT-23-6; same family as `U6`) is the
-  §3.3-mandated ESD array.
+  `U9` (TI TPD4E02B04DQAR, 4-channel array, 0.25 pF/ch typ, USON-10;
+  IEC 61000-4-2 ±12 kV contact) is the §3.3-mandated ESD array.
 
 Layout rules from §3.3, all mandatory in review: holder close to the socket,
 **trace length under 200 mm**; SIM signals away from RF and power traces (in a

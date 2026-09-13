@@ -93,6 +93,7 @@ its PPS legality.
 
 | Pin | Port | Net | Dir | Peripheral | PPS check (48-pin) | Source |
 |-----|------|-----|-----|------------|--------------------|--------|
+| 1 | RC7 | `CELL_PWR_EN` → `U3` EN (via `R49`) | out | GPIO | none needed | [bg95.c](../bg95.c), **repurposed** |
 | 6 | VSS | GND | — | — | — | Req |
 | 7 | VDD | `3V3_SYS` | — | — | — | Req |
 | 9 | RB1 | *(reserved for W_DISABLE#)* | out | GPIO | none needed | not wired in KiCad |
@@ -105,7 +106,6 @@ its PPS legality.
 | 22 | RA1 | `CELL_RX` (to card pin 11) | out | **U3TX** | UART3 TX 0x26 = **A**, F | [uart3.c](../uart3.c) |
 | 23 | RA2 | `CELL_CTS` (from card pin 25) | in | **U3CTS** | U3CTSPPS = **A**, F | **new**, Opt |
 | 24 | RA3 | `CELL_RTS` (to card pin 23) | out | **U3RTS** | UART3 RTS 0x28 = **A**, F | **new**, Opt |
-| 27 | RE0 | `CELL_PWR_EN` → `U3` EN | out | GPIO | none needed | [bg95.c](../bg95.c), **repurposed** |
 | 30 | VDD | `3V3_SYS` | — | — | — | Req |
 | 31 | VSS | GND | — | — | — | Req |
 | 36 | RF0 | `USB_RXD` (to U7 RXD) | out | **U1TX** | UART1 TX 0x20 = C, **F** | [uart1.c](../uart1.c) |
@@ -119,8 +119,8 @@ The `USB_TXD`/`USB_RXD` names are **bridge-relative** (U7's TXD drives the
 PIC's RX), same convention as `CELL_TX`/`CELL_RX` being card-relative — the
 crossing is already in the names, do not cross again in layout.
 
-Free after allocation: RC7 (1), RD4-RD7 (2-5), RB0 (8), RB2 (10), RB3 (11),
-RF4-RF7 (12-15), RA4-RA5 (25-26), RE1-RE2 (28-29), RA7 (32), RA6 (33),
+Free after allocation: RD4-RD7 (2-5), RB0 (8), RB2 (10), RB3 (11),
+RF4-RF7 (12-15), RA4-RA5 (25-26), RE0-RE2 (27-29), RA7 (32), RA6 (33),
 RC0 (34), RC1 (35), RF2 (38), RF3 (39), RC3 (41), RD3 (45), RC4-RC6 (46-48).
 Roughly 27 spare pins — comfortable headroom for sensors, CAN, or an SD card
 later.
@@ -147,7 +147,7 @@ constraint already called out in the project rules.
 **`CELL_RI` on RB5 uses INT2**, whose 48-pin ports are **B and F**. That lets
 a downlink URC wake the firmware instead of being polled.
 
-**`CELL_PWR_EN` uses RE0**, a GPIO that needs no PPS routing. Its active-HIGH
+**`CELL_PWR_EN` uses RC7**, a GPIO that needs no PPS routing. Its active-HIGH
 polarity is defined in [bg95.c](../bg95.c) — see section 3.
 
 **Programming and debug are `J1` with a PICkit 5**, not the USB-C port. The
@@ -190,7 +190,7 @@ sequenceDiagram
    each other while one is unpowered, which eliminates the back-power failure
    documented in [bench-wiring.md](bench-wiring.md).
 2. **The card starts OFF.** The `EN` pull-down on `3v3_cell.kicad_sch` holds
-   `U3` disabled while the PIC is in reset and RE0 is high-impedance (the
+   `U3` disabled while the PIC is in reset and RC7 is high-impedance (the
    TPS54560-Q1's 1.2 µA internal pull-up only develops 0.12 V across it, well
    below the 1.2 V enable threshold).
 3. **The PIC decides when the modem boots** by driving `CELL_PWR_EN` high.
@@ -199,10 +199,10 @@ sequenceDiagram
 
 > **Firmware change done: `CELL_PWR_EN` polarity inverted.**
 > [bg95.c](../bg95.c) previously drove RA2 for the Sixfab `HAT_PWR_OFF` pin,
-> where **HIGH = module off**. On the custom board RE0 drives the buck's `EN`,
+> where **HIGH = module off**. On the custom board RC7 drives the buck's `EN`,
 > where **HIGH = rail on**, and the firmware now matches: init writes
-> `LATE0 = CELL_PWR_OFF` (0) and the power-on write in `ST_PWR_HOLD` is
-> `LATE0 = CELL_PWR_ON` (1). The polarity is defined once by the
+> `LATC7 = CELL_PWR_OFF` (0) and the power-on write in `ST_PWR_HOLD` is
+> `LATC7 = CELL_PWR_ON` (1). The polarity is defined once by the
 > `CELL_PWR_ON`/`CELL_PWR_OFF` macros in `bg95.c` — getting this backwards
 > means the modem is powered before the PIC is ready, or never powers at all.
 

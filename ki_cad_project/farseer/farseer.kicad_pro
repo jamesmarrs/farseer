@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.8,
-          "width": 2.5
+          "height": 1.45,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -63,10 +63,10 @@
           "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.2,
-          "pad_connection": 2,
-          "remove_islands": 1,
+          "pad_connection": 1,
+          "remove_islands": 0,
           "thermal_relief_gap": 0.3,
-          "thermal_relief_spoke_width": 0.5
+          "thermal_relief_spoke_width": 0.3
         }
       },
       "diff_pair_dimensions": [
@@ -610,7 +610,7 @@
         "pcb_color": "rgb(0, 255, 9)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.34,
         "tuning_profile": ""
       },
       {
@@ -963,7 +963,7 @@
         "uuid": "b50562dd-c7d3-426b-8c59-03f29968ae16"
       }
     ],
-    "used_designators": "",
+    "used_designators": "R51",
     "variants": []
   },
   "sheets": [

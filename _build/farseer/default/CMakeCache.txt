@@ -48,6 +48,10 @@ CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 //C compiler
 CMAKE_C_COMPILER:STRING=/Applications/microchip/xc8/v3.10/bin/xc8-cc
 
+//Tell CMake that the compiler works, but cannot be run during
+// the configuration stage
+CMAKE_C_COMPILER_WORKS:BOOL=YES
+
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
 

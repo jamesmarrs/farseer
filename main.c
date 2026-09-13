@@ -29,6 +29,13 @@
 #pragma config FEXTOSC = OFF            // External oscillator not enabled
 #pragma config RSTOSC = HFINTOSC_64MHZ  // Power-up with HFINTOSC @ 64 MHz, CDIV 1:1
 
+// CONFIG2 (sec 8.5.2)
+// JTAGEN resets to 1 (TAP enabled). While enabled, RA0 (TMS), RA5 (TCK),
+// RB3 (TDO) and RB5 (TDI) become dedicated JTAG pins and are cut off from the
+// port/PPS logic (sec 39.1.1) -- the board uses RA0 = CELL_TX (U3RX) and
+// RB5 = CELL_RI. Boundary scan is not used (JTAG cannot program this part).
+#pragma config JTAGEN = OFF             // Release RA0/RA5/RB3/RB5 for I/O
+
 // CONFIG3 (sec 8.5.3)
 #pragma config MCLRE = EXTMCLR          // MCLR pin enabled (RE3)
 

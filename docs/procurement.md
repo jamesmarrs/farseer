@@ -73,7 +73,42 @@ What the *mechanical* design owes these parts (also flagged in
   transmitting a sustained uplink on B13; a mean drop > 1–2 dB means more
   separation or re-routed cables.
 
-## 4. Approximate cost (qty 1, USD, distributor list — order of magnitude)
+## 4. JLCPCB assembly BOM
+
+`scripts/export_kicad.sh` also writes the two BOMs JLCPCB's SMT quote page
+accepts, in its required column layout (`Comment`, `Designator`, `Footprint`,
+`LCSC Part #`, `MPN`):
+
+| File | Contents |
+|------|----------|
+| `docs/generated/farseer-jlcpcb-bom-full.csv` | every placeable line |
+| `docs/generated/farseer-jlcpcb-bom-smt.csv` | SMT only — `C7`, `F1`, `J1`, `J2`, `J3`, `J5`, `J6`, `JP1`, `MP1` removed as through-hole, wave-solder, or mechanical |
+
+`R54` is DNP in the schematic and is in **neither** file: JLCPCB places every
+line it is given, so a do-not-populate part has to be omitted, not annotated.
+
+LCSC part numbers come from `scripts/lookup_lcsc.py`, which resolves each MPN
+in the KiCad BOM and caches the result in `docs/generated/jlcpcb-parts.csv`
+(LCSC number, Basic/Extended class, stock, unit price, match status). Rules
+that script follows, and that any manual edit must keep:
+
+- **Exact MPN only.** This is an AEC-Q200/Q100 design; a "same value" substitute
+  silently drops that qualification. Punctuation is ignored when comparing
+  (JLC writes `EEH-ZA1H101P` as `EEHZA1H101P`) because that is the same
+  ordering number, not a substitute — those rows read `exact-normalized`.
+- A part JLC does not carry gets an **empty `LCSC Part #`** and a
+  `no-exact-match` status, plus whatever JLC stocks under a similar MPN in
+  `JLCCandidates`. Those candidates are **unverified leads for a human**, not
+  approved substitutions — some differ only in tape-and-reel suffix, others in
+  voltage rating, dielectric, or automotive grade.
+- Re-running is offline unless the schematic introduced a new MPN; cached hits
+  are reused and previous misses are retried. `--refresh` re-queries everything.
+
+Uploading also needs a CPL / centroid file (`Designator`, `Mid X`, `Mid Y`,
+`Rotation`, `Layer`, millimetres) exported from `farseer.kicad_pcb`; that is not
+generated yet.
+
+## 5. Approximate cost (qty 1, USD, distributor list — order of magnitude)
 
 | Item | Rough cost |
 |------|-----------|
@@ -85,7 +120,7 @@ Excluded from all figures: the BG95-M3 card, the GNSS antenna, the SIM, the
 PCB, and the enclosure. Prices are volatile — expect materially lower in
 volume.
 
-## 5. Verify before ordering
+## 6. Verify before ordering
 
 - [ ] Pigtail card end is **MHF I / U.FL-compatible**, not MHF4
 - [ ] Mated plug height fits between the card and the enclosure lid
@@ -105,3 +140,9 @@ volume.
 - [ ] KiCad BOM re-exported (`scripts/export_kicad.sh`) after the last
       schematic change, and DNP column reviewed against the populate
       decisions (GNSS bias-T, open items in the block docs)
+- [ ] `scripts/export_kicad.sh` raised no "never been looked up" warning, i.e.
+      every MPN in the BOM has been through `scripts/lookup_lcsc.py`
+- [ ] Every empty `LCSC Part #` in the JLCPCB BOM has an explicit decision
+      (approved substitute, consignment, or hand assembly)
+- [ ] Stock and Basic/Extended class confirmed on JLCPCB itself at quote time —
+      `jlcpcb-parts.csv` is a snapshot, and Extended parts carry a setup fee
